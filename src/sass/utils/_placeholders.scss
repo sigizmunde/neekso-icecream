@@ -1,0 +1,19 @@
+%list {
+  padding: 0;
+  list-style: none;
+}
+
+%link_no_accent {
+  text-decoration: none;
+  color: inherit;
+}
+
+%link {
+  @extend %link_no_accent;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: var(--accent-color);
+  }
+}
