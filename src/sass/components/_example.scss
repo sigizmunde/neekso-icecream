@@ -15,7 +15,7 @@
     @include flex_grid(20px);
   }
 
-  @media screen and ($tablet) {
+  @media screen and ($desktop) {
     @include flex_grid(20px, 50px);
   }
 }
@@ -31,7 +31,7 @@
     @include flex_grid_item(2, 20px);
   }
 
-  @media screen and ($tablet) {
+  @media screen and ($desktop) {
     @include flex_grid_item(4, 20px, 50px);
   }
 }
