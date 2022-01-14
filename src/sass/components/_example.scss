@@ -1,0 +1,43 @@
+.example__section {
+  padding-top: 256px;
+  padding-bottom: 127px;
+  background-color: var(--secondary-bg-color);
+}
+
+.example__container {
+  background-color: var(--hero-bg-color);
+}
+
+.example__heading {
+  margin-bottom: 75px;
+}
+
+.example__buttons {
+  @extend %list;
+  @include flex_grid(20px);
+}
+
+.example__item {
+  @include flex_grid_item(2, 20px);
+  text-align: center;
+}
+
+.normal__btn {
+  @include button(normal);
+}
+
+.inverted__btn {
+  @include button(inverted);
+}
+
+.small-normal__btn {
+  @include button(small-normal);
+}
+
+.small-inverted__btn {
+  @include button(small-inverted);
+}
+
+.small-inverted-wide__btn {
+  @include button(small-inverted, 250px);
+}

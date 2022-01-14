@@ -1,14 +1,20 @@
 :root {
+  --accent-font: 'Titan One', impact, sans-serif;
+  --main-font: 'DM Sans', verdana, sans-serif;
+
   --primary-text-color: #000000;
   --secondary-text-color: #ffa5ba; //same for icons
   --inverted-text-color: #ffffff;
-  --accent-color: #d41443;
   --additional-text-color: #907e82;
-  --main-background-color: #ffffff;
-  --secondary-background-color: #fff5f6;
-  --hero-background-color: #ffb8ca;
-  --menu-background-color: #e17992;
-  --circle-background-color: #ffa5ba;
+
+  --accent-color: #d41443;
+
+  --main-bg-color: #ffffff;
+  --secondary-bg-color: #fff5f6;
+  --hero-bg-color: #ffb8ca;
+  --menu-bg-color: #e17992;
+  --circle-bg-color: #ffa5ba;
+
   --card2-color: #f0d1a5;
   --card3-color: #c2e297;
   --quote-background-color: #fafafa;

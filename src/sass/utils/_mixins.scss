@@ -1,9 +1,13 @@
+// centers content of the element with flex parameter
 @mixin flex_center($display: flex) {
   display: $display;
   justify-content: center;
   align-items: center;
 }
 
+// mixin for flex container
+// $gap — (horizontal) gap
+// $v_gap - vertical gap (if not defined, then equal to $gap)
 @mixin flex_grid($gap, $v_gap: null) {
   @include flex_center();
   flex-wrap: wrap;
@@ -15,6 +19,10 @@
     margin-bottom: calc(-1 * #{$v_gap} / 2);
   }
 }
+
+// mixin for item in flex container
+// $cols — number of colons, $gap — (horizontal) gap
+// $v_gap - vertical gap (if not defined, then equal to $gap)
 @mixin flex_grid_item($cols, $gap, $v_gap: null) {
   align-self: stretch;
 
@@ -27,6 +35,9 @@
   }
 }
 
+// mixin for buttons
+// $type — normal, inverted, small-normal, small-inverted
+// $width — if defined then ads fixed width parameter
 @mixin button($type: normal, $width: null) {
   @include flex_center();
   padding: 0 22px;
@@ -46,7 +57,7 @@
     height: 44px;
     border-radius: 22px;
     color: var(--accent-color);
-    background-color: var(--main-background-color);
+    background-color: var(--main-bg-color);
     border: solid 1px var(--accent-color);
   } @else if $type == inverted {
     font-weight: 700;
@@ -83,11 +94,11 @@
   &:hover {
     @if ($type == normal or $type == small-normal) {
       color: var(--main-text-color);
-      background-color: var(--main-background-color);
+      background-color: var(--main-bg-color);
       border: solid 1px var(--inverted-bg-color);
     } @else if ($type == inverted or $type == small-inverted) {
       color: var(--accent-color);
-      background-color: var(--main-background-color);
+      background-color: var(--main-bg-color);
       border: solid 1px var(--accent-color);
     } @else {
       color: var(--inverted-text-color);
