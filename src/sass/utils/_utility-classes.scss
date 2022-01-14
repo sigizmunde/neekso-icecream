@@ -10,3 +10,10 @@
   clip-path: inset(50%);
   margin: -1px;
 }
+
+.is-hidden {
+  visibility: visible;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(150%);
+}
