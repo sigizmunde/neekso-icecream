@@ -4,40 +4,59 @@
   background-color: var(--secondary-bg-color);
 }
 
-.example__container {
-  background-color: var(--hero-bg-color);
-}
-
 .example__heading {
   margin-bottom: 75px;
 }
 
 .example__buttons {
   @extend %list;
-  @include flex_grid(20px);
+
+  @media screen and ($tablet) {
+    @include flex_grid(20px);
+  }
+
+  @media screen and ($tablet) {
+    @include flex_grid(20px, 50px);
+  }
 }
 
 .example__item {
-  @include flex_grid_item(2, 20px);
-  text-align: center;
+  @media screen and ($mobile) {
+    &:not(:last-child) {
+      margin-bottom: 50px;
+    }
+  }
+
+  @media screen and ($tablet) {
+    @include flex_grid_item(2, 20px);
+  }
+
+  @media screen and ($tablet) {
+    @include flex_grid_item(4, 20px, 50px);
+  }
 }
 
 .normal__btn {
   @include button(normal);
+  margin: 0 auto;
 }
 
 .inverted__btn {
   @include button(inverted);
+  margin: 0 auto;
 }
 
 .small-normal__btn {
   @include button(small-normal);
+  margin: 0 auto;
 }
 
 .small-inverted__btn {
   @include button(small-inverted);
+  margin: 0 auto;
 }
 
 .small-inverted-wide__btn {
-  @include button(small-inverted, 250px);
+  @include button(small-inverted, 100%);
+  margin: 0 auto;
 }

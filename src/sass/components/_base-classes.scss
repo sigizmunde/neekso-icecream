@@ -18,10 +18,11 @@
 
 .section__heading {
   color: var(--accent-color);
-  font-family: 'Titan One', Impact, 'Arial Narrow Bold', sans-serif;
+  font-family: var(--accent-font);
   font-weight: 400;
-
   font-size: 34px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
   line-height: 1.145;
   text-align: center;
 

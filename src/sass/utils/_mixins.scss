@@ -73,7 +73,7 @@
     height: 40px;
     border-radius: 20px;
     color: var(--accent-color);
-    background-color: transparent;
+    background-color: var(--main-bg-color);
     border: solid 1px var(--accent-color);
   } @else if $type == small-inverted {
     font-weight: 400;
@@ -93,9 +93,9 @@
   &:focus,
   &:hover {
     @if ($type == normal or $type == small-normal) {
-      color: var(--main-text-color);
-      background-color: var(--main-bg-color);
-      border: solid 1px var(--inverted-bg-color);
+      color: var(--inverted-text-color);
+      background-color: var(--accent-color);
+      border: solid 1px var(--accent-color);
     } @else if ($type == inverted or $type == small-inverted) {
       color: var(--accent-color);
       background-color: var(--main-bg-color);
