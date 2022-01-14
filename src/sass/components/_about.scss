@@ -1,0 +1,93 @@
+.about__section {
+  //   position: relative;
+
+  background-color: var(--secondary-bg-color);
+
+  padding-top: 125px;
+}
+.about__thumb--cow {
+  min-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 46px;
+
+  @media screen and (max-width: 767px) {
+    width: 280px;
+    height: 279px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 350px;
+    height: 349px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 516px;
+    height: 516px;
+  }
+}
+.about__description {
+  font-family: var(--main-font);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.62;
+
+  width: 220px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+
+  text-align: left;
+}
+
+// .about__caption, .about__text, .about__note{
+//    font-family: var(--main-font);
+//     font-weight: 500;
+//     font-size: 12px;
+//     line-height: 1.62;
+// }
+
+.about__caption {
+  color: var(--primary-text-color);
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+}
+.about__text {
+  color: var(--additional-text-color);
+
+  margin-bottom: 18px;
+}
+.about__note {
+  display: block;
+
+  color: var(--additional-text-color);
+}
+.about__thumb--milk {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -140px;
+  margin-bottom: 17px;
+  border: 1px solid red;
+  min-width: 320px;
+  min-height: 133px;
+  background-image: url(../images/milk@mobile1x.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 80%;
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: url(../images/cow-bottle@mobile2x.png);
+  }
+}
+.about__button {
+  @extend %list;
+
+  @include button(normal, 176px);
+  margin: 0 auto;
+  border: none;
+
+  & svg {
+    width: 5px;
+    height: 8px;
+    margin-left: 14px;
+  }
+}
