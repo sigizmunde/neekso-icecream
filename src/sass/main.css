@@ -232,7 +232,7 @@ input:-webkit-autofill:active {
   border: 1px solid red;
   min-width: 320px;
   min-height: 133px;
-  background-image: url(../images/milk@mobile1x.png);
+  background-image: url(../images/milk-mobile@1x.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 50% 80%;
@@ -240,7 +240,7 @@ input:-webkit-autofill:active {
 
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .about__thumb--milk {
-    background-image: url(../images/cow-bottle@mobile2x.png);
+    background-image: url(../images/milk@mobile@2x.png);
   }
 }
 
