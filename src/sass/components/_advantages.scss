@@ -1,0 +1,138 @@
+.container--advantages {
+    @media screen and ($tablet) {
+        padding-left: 36px;
+    }
+    @media screen and ($desktop) {
+        padding: 0 20px;
+    }
+}
+.advantages__section {
+    background-color: var(--secondary-bg-color);
+
+    @media screen and ($mobile) {
+        padding-top: 20px;
+        padding-bottom: 49px;
+    }
+    @media screen and ($tablet) {
+        padding-top: 33px;
+        padding-bottom: 70px;
+    }
+    @media screen and ($desktop) {
+        padding-top: 20px;
+    }
+}
+.advantages__list {
+    list-style-type: none;
+    @media screen and ($tablet) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    @media screen and ($desktop) {
+        display: flex;
+        justify-content: center;
+    }
+}
+.advantages__item {
+    @media screen and ($mobile) {
+        width: 230px;
+        margin-top: 38px;
+
+        &:first-child {
+            margin-top: 0;
+        }
+        
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    @media screen and ($tablet){
+        width: 180px;
+        margin-top: 0;
+        margin-right: 60px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    @media screen and ($desktop){
+        width: 330px;
+        margin-right: 30px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+}
+.advantages__name {
+    color: var(--accent-color);
+    font-family: var(--accent-font);
+    font-weight: 400;
+    font-size: 34px;
+    letter-spacing: 0.04em;
+    line-height: 1.145;
+
+    text-align: left;
+    text-transform: uppercase;
+
+    @media screen and ($tablet) {
+        font-size: 48px;
+    }
+
+    @media screen and ($desktop) {
+        font-size: 58px;
+    }
+    
+    &::before {
+        display: block;
+        content: '';
+        width: 50px;
+        height: 50px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        
+        @media screen and ($mobile) {
+            margin-bottom: 16px;
+        }
+        @media screen and ($tablet) {
+            margin-bottom: 36px;
+        }
+        @media screen and ($desktop) {
+            margin-bottom: 40px;
+        }
+    }
+    &--milk::before {
+        background-image: url(../images/milk.svg);
+    }
+    &--fruit::before {
+        background-image: url(../images/fruit.svg);
+    }
+    &--icecream::before {
+        background-image: url(../images/icecream.svg);
+    }
+}
+
+.advantages__paragraphe {
+    font-family: var(--main-font);
+    font-style: normal;
+    font-weight: 700;
+    color: var(--primary-text-color);
+
+    @media screen and ($mobile) {
+        font-size: 12px;
+        line-height: 1.7;
+        margin-top: 10px;
+    }
+    @media screen and ($tablet) {
+        font-size: 14px;
+        line-height: 1.74;
+        margin-top: 13px;
+    }
+    @media screen and ($desktop) {
+        font-size: 16px;
+        line-height: 1.76;
+        letter-spacing: 0.02em;
+        margin-top: 15px;
+    }
+}
