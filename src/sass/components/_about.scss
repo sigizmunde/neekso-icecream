@@ -1,9 +1,31 @@
 .about__section {
-  //   position: relative;
-
-  background-color: var(--secondary-bg-color);
+   background-color: var(--secondary-bg-color);
 
   padding-top: 125px;
+
+  @media screen and ($mobile) {
+    margin-left: auto;
+    margin-right: auto;
+
+    background-image: url(../images/about/milk-mobile@1x.png);
+    background-repeat: no-repeat;
+    background-size: auto 133px;
+    background-position: 50% 93%;
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(../images/about/milk-mobile@2x.png);
+    }
+  }
+  @media screen and ($desktop) {
+    background-image: url(../images/about/milk-desktop@1x.png);
+    background-repeat: no-repeat;
+    background-size: auto 534px;    
+    background-position: 50% 80%;
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(../images/about/milk-desktop@2x.png);
+    }
+  }
 }
 .about__thumb--cow {
   min-width: 320px;
@@ -61,22 +83,6 @@
   display: block;
 
   color: var(--additional-text-color);
-}
-.about__thumb--milk {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: -140px;
-  margin-bottom: 17px;
-  border: 1px solid red;
-  min-width: 320px;
-  min-height: 133px;
-  background-image: url(../images/about/milk-mobile@1x.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: 50% 80%;
-  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-    background-image: url(../images/about/milk-mobile@2x.png);
-  }
 }
 .about__button {
   @extend %list;
