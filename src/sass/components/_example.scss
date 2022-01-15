@@ -27,6 +27,7 @@
   @extend %link;
   color: var(--secondary-text-color);
   @include flex_grid_item(4, 5px);
+  font-size: 12px;
 }
 
 .example__section {
