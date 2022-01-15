@@ -40,26 +40,26 @@
     @media screen and ($tablet) {
       padding: 30px 0;
     }
-    &__town {
-      font-family: var(--main-font);
-      color: var(--primary-text-color);
-      font-weight: 500;
-      font-size: 12px;
-      line-height: 1.86;
-      letter-spacing: 0.04em;
-      @media screen and ($tablet) {
-        font-size: 14px;
-      }
+  }
+  &__town {
+    font-family: var(--main-font);
+    color: var(--primary-text-color);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.86;
+    letter-spacing: 0.04em;
+    @media screen and ($tablet) {
+      font-size: 14px;
     }
-    &__text {
-      font-family: var(--main-font);
-      color: var(--additional-text-color);
-      font-weight: 500;
-      font-size: 12px;
-      line-height: 1.5;
-      @media screen and ($tablet) {
-        font-size: 14px;
-      }
+  }
+  &__text {
+    font-family: var(--main-font);
+    color: var(--additional-text-color);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.5;
+    @media screen and ($tablet) {
+      font-size: 14px;
     }
   }
   &__links {
@@ -83,7 +83,7 @@
     display: inline-flex;
     align-items: center;
     height: 16px;
-    padding: 0px 20px;
+    padding: 0px 24px;
     border-radius: 4px;
 
     font-family: var(--main-font);
@@ -92,6 +92,11 @@
     font-size: 12px;
     line-height: 1.86;
     letter-spacing: 0.04em;
+    @media screen and ($tablet) {
+      height: 28px;
+      font-size: 16px;
+      padding: 0 18px;
+    }
     &--cafe {
       background-color: var(--card2-color);
       text-transform: uppercase;
