@@ -11,12 +11,13 @@
   }
   &__review {
     position: relative;
-    padding: 43px 61px 26px 61px;
     margin-bottom: 52px;
     font-weight: 500;
     font-size: 12px;
     line-height: 2.55;
     background-color: #fafafa;
+    background-size: 31px 31px;
+    background-image: linear-gradient(to top, #e1e1e1 1px, #e1e1e1 1px, transparent 1px);
   }
   &__title {
     margin-bottom: 35px;
@@ -24,6 +25,9 @@
     font-size: 14px;
     line-height: 1.86;
   }
+}
+.review__wrap {
+  padding: 43px 62px 26px 62px;
 }
 .slider {
   @extend %list;
