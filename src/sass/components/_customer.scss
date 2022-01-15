@@ -1,15 +1,8 @@
-.customer__section {
-  padding-top: 40px;
-  padding-bottom: 60px;
-}
 .customer {
   &__section {
+    padding-top: 40px;
+    padding-bottom: 60px;
     text-align: center;
-  }
-  &__photo {
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 29px;
   }
   &__review {
     position: relative;
@@ -26,6 +19,15 @@
     font-size: 14px;
     line-height: 1.86;
   }
+}
+.photo-thumb {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 29px;
 }
 .review__wrap {
   position: relative;
