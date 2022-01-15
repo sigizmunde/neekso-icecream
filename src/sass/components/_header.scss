@@ -1,12 +1,10 @@
 .header {
   &__section {
-    position: relative;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: cover;
-    margin: 0 auto;
-    background-color: rgba(255, 184, 202, 1);
-    height: 100px;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    width: 100%;
+    height: 60px;
   }
   &__container {
     position: absolute;
@@ -36,11 +34,15 @@
     border-radius: 50%;
     width: 50px;
     height: 50px;
+    margin-right: 20px;
+    padding-top: 10px;
+    padding-left: 10px;
     background-color: var(--accent-color);
   }
 
   &__logo--icon {
-    fill: var(--inverted-text-color);
+    // margin-top: 15px;
+    fill: var(--secondary-bg-color);
   }
 
   &__nav--list {
@@ -61,11 +63,15 @@
 }
 
 .open-button {
-  position: absolute;
-  top: 20px;
-  right: 30px;
+  position: fixed;
+  // top: 20px;
+  // right: 30px;
   border: none;
   background-color: inherit;
+  @media screen and (min-width: 319px) and (max-width: 767px) {
+    top: 20px;
+    right: 30px;
+  }
   @media screen and (min-width: 1267px) {
     display: none;
   }
@@ -85,4 +91,13 @@
       fill: var(--accent-text-color);
     }
   }
+}
+
+.header__background {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  // background-color: var(--accent-color);
 }
