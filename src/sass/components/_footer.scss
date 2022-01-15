@@ -75,7 +75,7 @@
 }
 
 .social__link {
-  @extend %link;
+  @extend %link_no_accent;
   display: block;
 
   text-align: center;
