@@ -1,3 +1,7 @@
+body {
+  font-family: var(--main-font);
+}
+
 .container {
   margin: 0 auto;
   padding: 0 20px;
@@ -9,10 +13,12 @@
 
   @media screen and ($tablet) {
     width: 768px;
+    padding: 0 34px;
   }
 
   @media screen and ($desktop) {
     width: 1200px;
+    padding: 0 74px;
   }
 }
 
@@ -34,6 +40,10 @@
 
   @media screen and ($desktop) {
     font-size: 58px;
+  }
+
+  &--left {
+    text-align: left;
   }
 }
 
@@ -58,6 +68,10 @@
   @media screen and ($desktop) {
     font-size: 30px;
     line-height: 1.13;
+  }
+
+  &--left {
+    text-align: left;
   }
 }
 
