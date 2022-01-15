@@ -7,15 +7,20 @@
     margin: 0 auto;
     background-color: var(--hero-bg-color);
   }
+
+  &__wrap {
+    display: flex;
+  }
   &__logo {
     @extend %link;
-    color: var(--inverted-text-color);
+    color: var(--accent-color);
 
     font-family: var(--accent-font);
     font-weight: 400;
     font-size: 26px;
     letter-spacing: 0.04em;
     line-height: 1.15;
+    text-transform: uppercase;
   }
 
   &__nav--list {

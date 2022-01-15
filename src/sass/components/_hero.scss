@@ -33,6 +33,7 @@
     }
   }
   &__heading--accented {
+    display: block;
     color: var(--accent-color);
 
     font-family: var(--accent-font);
