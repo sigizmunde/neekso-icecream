@@ -1,0 +1,61 @@
+.header {
+  &__section {
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    margin: 0 auto;
+    background-color: var(--hero-bg-color);
+  }
+  &__logo {
+    @extend %link;
+    color: var(--inverted-text-color);
+
+    font-family: var(--accent-font);
+    font-weight: 400;
+    font-size: 26px;
+    letter-spacing: 0.04em;
+    line-height: 1.15;
+  }
+
+  &__nav--list {
+    @extend %list;
+    @media screen and (max-width: 1279px) {
+      display: none;
+    }
+
+    @media screen and ($desktop) {
+      display: flex;
+    }
+  }
+  &__nav--item {
+    @extend %link;
+  }
+}
+
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  border: none;
+  background-color: inherit;
+  @media screen and (min-width: 1267px) {
+    display: none;
+  }
+
+  &__icon {
+    fill: var(--accent-color);
+    background-color: inherit;
+    @media screen and (min-width: 1267px) {
+      display: none;
+    }
+    transition: fill var(--time-duration) cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &:hover,
+  &:focus {
+    &__icon {
+      fill: var(--accent-text-color);
+    }
+  }
+}
