@@ -20,20 +20,64 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
-
     max-width: 220px;
+    background: #ffffff;
+    box-shadow: var(--shadow-params);
+    border-radius: 24px;
     @media screen and ($mobile) {
       &:last-child {
         margin-bottom: 0;
       }
+    }
+    @media screen and ($tablet) {
+      padding: 50px 31px;
+      margin: 10px;
+    }
+  }
+  &__header {
+    padding: 25px 0;
+    border-bottom: 1px solid #e1e1e1;
+    @media screen and ($tablet) {
+      padding: 30px 0;
+    }
+    &__town {
+      font-family: var(--main-font);
+      color: var(--primary-text-color);
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 1.86;
+      letter-spacing: 0.04em;
       @media screen and ($tablet) {
-        margin: 10px;
+        font-size: 14px;
       }
     }
-
-    background: #ffffff;
-    box-shadow: var(--shadow-params);
-    border-radius: 24px;
+    &__text {
+      font-family: var(--main-font);
+      color: var(--additional-text-color);
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 1.5;
+      @media screen and ($tablet) {
+        font-size: 14px;
+      }
+    }
+  }
+  &__links {
+    padding-top: 25px;
+    @extend %list;
+    font-family: var(--main-font);
+    color: var(--additional-text-color);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.5;
+    @media screen and ($tablet) {
+      font-size: 14px;
+      line-height: 1.8;
+    }
+  }
+  &__link {
+    @extend %link;
+    transition: color var(--transition-params);
   }
   &__title {
     display: inline-flex;
@@ -58,26 +102,8 @@
     }
   }
 }
-.contacts-header {
-  padding: 25px 0;
-  border-bottom: 1px solid #e1e1e1;
-  &__town {
-    font-family: var(--main-font);
-    color: var(--primary-text-color);
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 1.86;
-    letter-spacing: 0.04em;
-  }
-  &__text {
-    font-family: var(--main-font);
-    color: var(--additional-text-color);
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 1.5;
-  }
-}
-.contacts-schedule {
+
+.schedule {
   padding: 25px 0;
   border-bottom: 1px solid #e1e1e1;
 
@@ -87,26 +113,19 @@
     font-weight: 500;
     font-size: 12px;
     line-height: 1.86;
+    @media screen and ($tablet) {
+      font-size: 14px;
+    }
   }
   &__time {
     color: var(--circle-bg-color);
+    @media screen and ($tablet) {
+      font-size: 14px;
+    }
   }
   @extend %list;
 }
-.contacts-footer {
-  padding-top: 25px;
-  @extend %list;
-  font-family: var(--main-font);
-  color: var(--additional-text-color);
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.5;
-  &__link {
-    @extend %link;
-    transition: color var(--transition-params);
-  }
-}
-.contacts-btn {
+.btn {
   @extend %list;
   @media screen and ($tablet) {
     @include flex_grid(20px);
@@ -124,29 +143,29 @@
     @media screen and ($tablet) {
       @include flex_grid_item(2, 20px);
     }
+    &--inverted {
+      @include button(inverted);
+      margin: 0 auto;
+      padding: 0;
+      width: 161px;
+
+      transition: color var(--transition-params), background-color var(--transition-params);
+    }
+    &--normal {
+      @include button(normal);
+      margin: 0 auto;
+      padding: 0;
+      width: 161px;
+
+      transition: color var(--transition-params), background-color var(--transition-params);
+    }
   }
-  &__inverted {
-    @include button(inverted);
-    margin: 0 auto;
-    padding: 0;
-    width: 161px;
-
-    transition: color var(--transition-params), background-color var(--transition-params);
-
-    &__icon {
+  &__icon {
+    &--inverted {
       fill: currentColor;
       margin-left: 8px;
     }
-  }
-  &__normal {
-    @include button(normal);
-    margin: 0 auto;
-    padding: 0;
-    width: 161px;
-
-    transition: color var(--transition-params), background-color var(--transition-params);
-
-    &__icon {
+    &--normal {
       fill: currentColor;
       margin-left: 13px;
     }
