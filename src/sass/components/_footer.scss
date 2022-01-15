@@ -2,6 +2,11 @@
   background-color: var(--secondary-bg-color);
 }
 
+.footer__container {
+  padding-top: 56px;
+  padding-bottom: 43px;
+}
+
 .footer__blocks {
   @media screen and ($tablet) {
     @include flex_grid(36px);
@@ -12,10 +17,19 @@
   }
 }
 
+.footer__slogan {
+  width: 234px;
+  margin-bottom: 43px;
+}
+
+.footer__contacts {
+  text-align: right;
+}
+
 .footer__text {
   font-family: var(--main-font);
   font-weight: 700;
-  font-size: 16px;
+  font-size: 12px;
   line-height: 1.86;
 
   letter-spacing: 0.02em;
@@ -35,8 +49,10 @@
 .social__menu {
   @extend %list;
 
-  display: flex;
+  display: inline-flex;
   flex-wrap: nowrap;
+
+  margin-bottom: 46px;
 }
 
 .social__item {
@@ -44,7 +60,7 @@
   height: 34px;
   padding: 7px;
   border-radius: 17px;
-  color: var(--accent-color);
+  color: var(--inverted-text-color);
   background-color: var(--secondary-text-color);
 
   &:active,
@@ -71,4 +87,21 @@
   max-height: 20px;
 
   fill: currentColor;
+}
+
+.legal__wrapper {
+  @include flex_center;
+  height: 90px;
+  border-top: 1px solid #e1e1e1;
+}
+
+.legal__text {
+  width: 150px;
+
+  color: var(--additional-text-color);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.52;
+  text-align: center;
 }
