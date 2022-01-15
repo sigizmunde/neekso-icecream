@@ -1,0 +1,96 @@
+.container__advantages {
+    @media screen and ($tablet) {
+        padding-left: 36px;
+    }
+    @media screen and ($desktop) {
+        // padding-left: 115px;
+        // padding-right: 115px;
+        padding-left: 0;
+        padding: 0 20px;
+    }
+}
+.advantages__section {
+    padding-top: 20px;
+    padding-bottom: 49px;
+    background-color: var(--secondary-bg-color);
+}
+.advantages__list {
+    list-style-type: none;
+    @media screen and ($tablet) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    @media screen and ($desktop) {
+        display: flex;
+        justify-content: center;
+    }
+}
+.advantages {
+    &__item {
+        @media screen and ($mobile) {
+            width: 230px;
+            margin-top: 38px;
+
+            &:first-child {
+                margin-top: 0;
+            }
+            
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        @media screen and ($tablet){
+            width: 180px;
+            margin-top: 0;
+            margin-right: 60px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        @media screen and ($desktop){
+            width: 330px;
+            margin-right: 30px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+}
+.advantages__name {
+    text-align: left;
+    
+    &::before {
+        display: block;
+        content: '';
+        width: 50px;
+        height: 50px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-bottom: 16px;
+        
+    }
+
+}
+.advantages__milk::before {
+    background-image: url(../images/milk.svg);
+}
+.advantages__fruit::before {
+    background-image: url(../images/fruit.svg);
+}
+.advantages__icecream::before {
+    background-image: url(../images/icecream.svg);
+}
+.advantages__paragraphe {
+    font-family: var(--main-font);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.7;
+    color: var(--primary-text-color);
+
+    margin-top: 10px;
+}
