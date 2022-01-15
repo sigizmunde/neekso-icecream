@@ -1,15 +1,44 @@
 .products__section {
   padding-top: 120px;
   padding-bottom: 100px;
+
+  @media screen and($tablet) {
+    padding-bottom: 110px;
+  }
+
+  @media screen and($desktop) {
+    padding-top: 130px;
+    padding-bottom: 120px;
+  }
+}
+
+.section__subtitle {
+  margin-bottom: 15px;
 }
 
 .section__heading--products {
   margin-bottom: 145px;
+
+  @media screen and($tablet) {
+    margin-bottom: 150px;
+  }
+
+  @media screen and($desktop) {
+    margin-bottom: 260px;
+  }
 }
 
 .products-cards__list {
   @extend %list;
   width: 100%;
+
+  @media screen and($tablet) {
+    @include flex_grid(20px);
+  }
+
+  @media screen and($desktop) {
+    @include flex_grid(24px);
+  }
 }
 
 .products-cards__item {
@@ -17,11 +46,20 @@
   width: 100%;
   height: 485px;
   border-radius: 24px;
-}
 
-.products-cards__item {
-  &:not(:last-child) {
-    margin-bottom: 130px;
+  @media screen and($mobile) {
+    &:not(:last-child) {
+      margin-bottom: 130px;
+    }
+  }
+
+  @media screen and($tablet) {
+    @include flex_grid_item(3, 20px);
+  }
+
+  @media screen and($desktop) {
+    @include flex_grid_item(3, 24px);
+    height: 525px;
   }
 }
 
@@ -35,6 +73,17 @@
   padding-bottom: 40px;
   padding-left: 40px;
   padding-right: 40px;
+
+  @media screen and($tablet) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @media screen and($desktop) {
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-bottom: 50px;
+  }
 }
 
 .products-cards__item--rose {
@@ -59,55 +108,72 @@
 
   text-align: center;
   margin-bottom: 65px;
+
+  @media screen and($desktop) {
+    font-size: 30px;
+    line-height: 1.13;
+  }
 }
 
 .products-cards__title--rose::before,
 .products-cards__title--yellow::before,
 .products-cards__title--green::before {
   content: '';
-  width: 249px;
-  height: 252px;
+  width: 250px;
+  height: 250px;
 
   position: absolute;
   left: 50%;
-  top: -23.5%;
+  top: -23%;
   transform: translateX(-50%);
 
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  @media screen and($tablet) {
+    width: 220px;
+    height: 220px;
+    top: -20.5%;
+  }
+
+  @media screen and($desktop) {
+    width: 335px;
+    height: 335px;
+    top: -40%;
+  }
 }
 
 .products-cards__title--rose::before {
-  background-image: url(../images/products-ice-cream-mobile@1x.png);
+  background-image: url(../images/products/products-ice-cream-desktop@1x.png);
 
   @media (min-device-pixel-ratio: 2),
     (-webkit-min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-    background-image: url(../images/products-ice-cream-mobile@2x.png);
+    background-image: url(../images/products/products-ice-cream-desktop@2x.png);
   }
 }
 
 .products-cards__title--yellow::before {
-  background-image: url(../images/products-ice-coffee-mobile@1x.png);
+  background-image: url(../images/products/products-ice-coffee-desktop@1x.png);
 
   @media (min-device-pixel-ratio: 2),
     (-webkit-min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-    background-image: url(../images/products-ice-coffee-mobile@2x.png);
+    background-image: url(../images/products/products-ice-coffee-desktop@2x.png);
   }
 }
 
 .products-cards__title--green::before {
-  background-image: url(../images/products-milkshakes-mobile@1x.png);
+  background-image: url(../images/products/products-milkshakes-desktop@1x.png);
 
   @media (min-device-pixel-ratio: 2),
     (-webkit-min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-    background-image: url(../images/products-milkshakes-mobile@2x.png);
+    background-image: url(../images/products/products-milkshakes-desktop@2x.png);
   }
 }
 
@@ -120,7 +186,6 @@
 }
 
 .products-cards__text {
-  font-family: var(--main-font);
   font-weight: 700;
   font-size: 14px;
   line-height: 1.5;
@@ -128,19 +193,39 @@
   color: var(--main-bg-color);
 
   text-align: center;
-  margin-bottom: 30px;
+
+  max-height: 125px;
+  overflow: hidden;
+
+  @media screen and($tablet) {
+    line-height: 1.7;
+  }
+
+  @media screen and($desktop) {
+    font-size: 16px;
+    line-height: 1.9;
+  }
 }
 
 .products__button {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  color: var(--main-bg-color);
+  background-color: var(--main-bg-color);
+  color: var(--accent-color);
   border: none;
-
   text-align: center;
+  cursor: pointer;
+  margin-top: auto;
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+    color: var(--main-bg-color);
+  }
 }
 
 .products__button-icon {
   transform: translateY(20%);
+  fill: currentColor;
 }
