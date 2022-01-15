@@ -1,9 +1,8 @@
-.customer {
+.customer__section {
   padding-top: 40px;
   padding-bottom: 60px;
-  &__card {
-    // position: relative;
-  }
+}
+.customer {
   &__section {
     text-align: center;
   }
@@ -18,8 +17,7 @@
     font-weight: 500;
     font-size: 12px;
     line-height: 2.55;
-    // background-color: #fafafa;
-    background-size: 31px 31px;
+    background-size: 1px 30px;
     background-image: linear-gradient(to top, #e1e1e1 1px, #e1e1e1 1px, transparent 1px);
   }
   &__title {
@@ -73,4 +71,16 @@
   background-repeat: no-repeat;
   width: 54px;
   height: 40px;
+}
+.customer__review::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  background-image: url('../images/customer/dots.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 4px;
+  top: 295px;
+  right: 63px;
 }
