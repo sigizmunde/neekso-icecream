@@ -3,7 +3,8 @@
         max-width: 320px;
     }
     @media screen and ($tablet) {
-        padding-left: 36px;
+        // padding-left: 36px;
+        padding: 0 36px;
     }
     @media screen and ($desktop) {
         padding: 0 20px;
