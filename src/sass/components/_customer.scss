@@ -10,7 +10,8 @@
     margin-bottom: 29px;
   }
   &__review {
-    padding: 43px 57px 26px 66px;
+    position: relative;
+    padding: 43px 61px 26px 61px;
     margin-bottom: 52px;
     font-weight: 500;
     font-size: 12px;
@@ -49,4 +50,7 @@
       background-color: var(--accent-color);
     }
   }
+}
+.review-icon {
+  position: absolute;
 }
