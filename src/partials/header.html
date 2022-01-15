@@ -1,20 +1,26 @@
 <header class="header__section">
-    <div class="container">
+    <div class="container header__container">
         <div class="header__wrap">
-            <a href="" class="header__logo">icecream</a>
+            <a href="" class="header__logo">
+                <span class="header__logo--wrap">
+                <svg class="header__logo--icon" width="50" height="50">
+                    <use href="./images/symbols.svg#icon-logo"></use>
+                </svg>
+                </span>
+                icecream</a>
             <nav class="nav">
                 <ul class="header__nav--list">
-                    <li class="header__nav--item"><a href="" class="nav__list">Home</a></li>
-                    <li class="header__nav--item"><a href="" class="nav__list">About us</a></li>
-                    <li class="header__nav--item"><a href="" class="nav__list">How it’s made?</a></li>
-                    <li class="header__nav--item"><a href="" class="nav__list">Our products</a></li>
-                    <li class="header__nav--item"><a href="" class="nav__list">Contact</a></li>
+                    <li class="header__nav--item"><a href="" class="header__nav--link">Home</a></li>
+                    <li class="header__nav--item"><a href="" class="header__nav--link">About us</a></li>
+                    <li class="header__nav--item"><a href="" class="header__nav--link">How it’s made?</a></li>
+                    <li class="header__nav--item"><a href="" class="header__nav--link">Our products</a></li>
+                    <li class="header__nav--item"><a href="" class="header__nav--link">Contact</a></li>
                 </ul>
             </nav>            
         </div>
         
-            <button class="js-close-menu close-button">
-                <svg class="close-button__icon-menu" width="40" height="40">
+            <button class="js-open-menu open-button">
+                <svg class="open-button__icon-menu" width="40" height="40">
                     <use href="./images/symbols.svg#icon-menu"></use>
                 </svg>
             </button>       

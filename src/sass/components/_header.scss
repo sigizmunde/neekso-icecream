@@ -5,7 +5,13 @@
     background-position: 50% 50%;
     background-size: cover;
     margin: 0 auto;
-    background-color: var(--hero-bg-color);
+    background-color: rgba(255, 184, 202, 1);
+    height: 100px;
+  }
+  &__container {
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 
   &__wrap {
@@ -17,14 +23,29 @@
 
     font-family: var(--accent-font);
     font-weight: 400;
-    font-size: 26px;
+    font-size: 38px;
     letter-spacing: 0.04em;
     line-height: 1.15;
     text-transform: uppercase;
+    margin-left: 20px;
+    margin-top: 6px;
+  }
+
+  &__logo--wrap {
+    // display: block;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: var(--accent-color);
+  }
+
+  &__logo--icon {
+    fill: var(--inverted-text-color);
   }
 
   &__nav--list {
     @extend %list;
+    align-items: center;
     @media screen and (max-width: 1279px) {
       display: none;
     }
@@ -33,12 +54,13 @@
       display: flex;
     }
   }
-  &__nav--item {
+
+  &__nav--link {
     @extend %link;
   }
 }
 
-.close-button {
+.open-button {
   position: absolute;
   top: 20px;
   right: 30px;

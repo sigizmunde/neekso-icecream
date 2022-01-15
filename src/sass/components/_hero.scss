@@ -6,11 +6,23 @@
     background-size: cover;
     margin: 0 auto;
     padding-top: 27px;
+    padding-left: 20px;
     background-color: var(--hero-bg-color);
-    // background-image: url(./images/hero/hero.jpg);
+  }
+
+  &__container {
+    width: 100%;
+    padding: 0;
+  }
+
+  &__wrap {
+    position: absolute;
   }
 
   &__heading {
+    display: block;
+    width: 218px;
+    height: 106px;
     color: var(--inverted-text-color);
 
     font-family: var(--accent-font);
@@ -19,8 +31,10 @@
     letter-spacing: 0.04em;
     line-height: 1.15;
 
-    text-align: center;
+    text-align: left;
     text-transform: uppercase;
+    margin-right: auto;
+    margin-top: 180px;
 
     @media screen and ($tablet) {
       font-size: 22px;
@@ -58,10 +72,22 @@
   &__btns--list {
     @extend %list;
     @include flex_center();
+    margin-top: 19px;
+    margin-left: -8px;
   }
 
   &__button {
     @extend %link;
     @include button();
+    margin-left: 8px;
+  }
+
+  &__picture-wrap {
+    // position: absolute;
+    // bottom: 0px;
+    // right: 94px;
+    margin-left: 117px;
+    margin-right: 32px;
+    z-index: -2;
   }
 }
