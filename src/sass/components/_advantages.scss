@@ -1,9 +1,8 @@
-.container__advantages {
+.container--advantages {
     @media screen and ($tablet) {
         padding-left: 36px;
     }
     @media screen and ($desktop) {
-        padding-left: 0;
         padding: 0 20px;
     }
 }
@@ -66,7 +65,23 @@
 
 }
 .advantages__name {
+    color: var(--accent-color);
+    font-family: var(--accent-font);
+    font-weight: 400;
+    font-size: 34px;
+    letter-spacing: 0.04em;
+    line-height: 1.145;
+
     text-align: left;
+    text-transform: uppercase;
+
+    @media screen and ($tablet) {
+        font-size: 48px;
+    }
+
+    @media screen and ($desktop) {
+        font-size: 58px;
+    }
     
     &::before {
         display: block;
@@ -87,15 +102,15 @@
             margin-bottom: 40px;
         }
     }
-}
-.advantages__milk::before {
-    background-image: url(../images/milk.svg);
-}
-.advantages__fruit::before {
-    background-image: url(../images/fruit.svg);
-}
-.advantages__icecream::before {
-    background-image: url(../images/icecream.svg);
+    &--milk::before {
+        background-image: url(../images/milk.svg);
+    }
+    &--fruit::before {
+        background-image: url(../images/fruit.svg);
+    }
+    &--icecream::before {
+        background-image: url(../images/icecream.svg);
+    }
 }
 
 .advantages__paragraphe {
