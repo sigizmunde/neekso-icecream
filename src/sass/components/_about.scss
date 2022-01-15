@@ -27,21 +27,21 @@
     }
   }
 }
-.about__thumb--cow {
+.about__thumb-cow {
   min-width: 320px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 46px;
 
-  @media screen and (max-width: 767px) {
+  @media screen and ($mobile) {
     width: 280px;
     height: 279px;
   }
-  @media screen and (min-width: 768px) {
+  @media screen and ($tablet) {
     width: 350px;
     height: 349px;
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and ($desktop) {
     width: 516px;
     height: 516px;
   }
