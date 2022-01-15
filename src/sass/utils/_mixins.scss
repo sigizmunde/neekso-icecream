@@ -59,7 +59,7 @@
     padding: 0 22px;
     color: var(--accent-color);
     background-color: var(--main-bg-color);
-    border: solid 1px var(--accent-color);
+    border: none;
   } @else if $type == inverted {
     font-weight: 700;
     font-size: 16px;
@@ -68,7 +68,7 @@
     padding: 0 22px;
     color: var(--inverted-text-color);
     background-color: var(--accent-color);
-    border: solid 1px var(--accent-color);
+    border: none;
   } @else if $type == small-normal {
     font-weight: 400;
     font-size: 8px;
@@ -83,7 +83,7 @@
     }
     color: var(--accent-color);
     background-color: var(--main-bg-color);
-    border: solid 1px var(--accent-color);
+    border: none;
   } @else if $type == small-inverted {
     font-weight: 400;
     font-size: 8px;
@@ -98,11 +98,11 @@
     }
     color: var(--inverted-text-color);
     background-color: var(--accent-color);
-    border: solid 1px var(--accent-color);
+    border: none;
   } @else {
     color: var(--accent-color);
     background-color: transparent;
-    border: solid 1px var(--accent-color);
+    border: none;
   }
 
   &:active,
@@ -111,15 +111,15 @@
     @if ($type == normal or $type == small-normal) {
       color: var(--inverted-text-color);
       background-color: var(--accent-color);
-      border: solid 1px var(--accent-color);
+      border: none;
     } @else if ($type == inverted or $type == small-inverted) {
       color: var(--accent-color);
       background-color: var(--main-bg-color);
-      border: solid 1px var(--accent-color);
+      border: none;
     } @else {
       color: var(--inverted-text-color);
       background-color: var(--accent-color);
-      border: solid 1px var(--accent-color);
+      border: none;
     }
   }
 }
