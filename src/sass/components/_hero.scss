@@ -1,0 +1,64 @@
+.hero {
+  &__section {
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    margin: 0 auto;
+    background-color: var(--hero-bg-color);
+    background-image: url(./images/hero/hero.jpg);
+  }
+
+  &__heading {
+    color: var(--inverted-text-color);
+
+    font-family: var(--accent-font);
+    font-weight: 400;
+    font-size: 26px;
+    letter-spacing: 0.04em;
+    line-height: 1.15;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    @media screen and ($tablet) {
+      font-size: 22px;
+      line-height: 1.13;
+    }
+
+    @media screen and ($desktop) {
+      font-size: 38px;
+      line-height: 1.15;
+    }
+  }
+  &__heading--accented {
+    color: var(--accent-color);
+
+    font-family: var(--accent-font);
+    font-weight: 400;
+    font-size: 48px;
+    letter-spacing: 0.04em;
+    line-height: 0.96;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    @media screen and ($tablet) {
+      font-size: 34px;
+      line-height: 0.9;
+    }
+
+    @media screen and ($desktop) {
+      font-size: 58px;
+    }
+  }
+
+  &__btns--list {
+    @extend %list;
+    @include flex_center();
+  }
+
+  &__button {
+    @extend %link;
+    @include button();
+  }
+}
