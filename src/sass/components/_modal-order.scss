@@ -14,11 +14,13 @@
 }
 .form__textarea {
 }
-.modal__btn {
-  @include button(normal, 200px);
-  margin: 0 auto;
-}
+
 .btn__icon {
-}
-.icon-icetruck {
+  margin-left: 16px;
+  width: 20px;
+  height: 20px;
+
+  .icon-icetruck {
+    fill: currentColor;
+  }
 }
