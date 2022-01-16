@@ -8,11 +8,19 @@
       padding-top: 60px;
       padding-bottom: 60px;
     }
+    @media screen and (min-width: 1200px) {
+      padding-top: 60px;
+      padding-bottom: 65px;
+    }
   }
   &__card {
     @media screen and (min-width: 768px) {
-      padding-left: 74px;
-      padding-right: 74px;
+      padding-left: 34px;
+      padding-right: 34px;
+    }
+    @media screen and (min-width: 1200px) {
+      padding-left: 101px;
+      padding-right: 101px;
     }
   }
   &__review {
@@ -25,6 +33,11 @@
     @media screen and (min-width: 768px) {
       font-size: 14px;
       line-height: 2.16;
+      letter-spacing: 0.04em;
+    }
+    @media screen and (min-width: 1200px) {
+      font-size: 16px;
+      line-height: 1.86;
     }
   }
   &__title {
@@ -34,6 +47,9 @@
     line-height: 1.86;
     @media screen and (min-width: 768px) {
       font-size: 16px;
+    }
+    @media screen and (min-width: 1200px) {
+      font-size: 20px;
     }
   }
 }
@@ -48,6 +64,9 @@
   @media screen and (min-width: 768px) {
     margin-bottom: 19px;
   }
+  @media screen and (min-width: 768px) {
+    margin-bottom: 15px;
+  }
 }
 .review__wrap {
   margin-bottom: 52px;
@@ -57,6 +76,17 @@
   padding: 43px 62px 26px 62px;
   @media screen and (min-width: 768px) {
     margin-bottom: 42px;
+    padding-top: 47px;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-bottom: 34px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 34px;
+    padding-top: 47px;
+    padding-left: 52px;
+    padding-right: 52px;
+    padding-bottom: 32px;
   }
 }
 .slider {
@@ -95,7 +125,7 @@
   width: 54px;
   height: 40px;
   @media screen and (min-width: 768px) {
-    left: -10%;
+    left: -5%;
     top: -20%;
   }
 }
