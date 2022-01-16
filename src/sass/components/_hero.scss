@@ -1,0 +1,112 @@
+.hero {
+  &__section {
+    position: relative;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    margin: 0 auto;
+    padding-top: 27px;
+    padding-left: 20px;
+    background-color: var(--hero-bg-color);
+    z-index: 20;
+  }
+
+  &__container {
+    // overflow: hidden;
+    width: 100%;
+    padding: 0;
+  }
+
+  &__wrap {
+    position: absolute;
+    z-index: 2;
+  }
+
+  &__heading {
+    display: block;
+    width: 218px;
+    height: 106px;
+    color: var(--inverted-text-color);
+
+    font-family: var(--accent-font);
+    font-weight: 400;
+    font-size: 26px;
+    letter-spacing: 0.04em;
+    line-height: 1.15;
+
+    text-align: left;
+    text-transform: uppercase;
+    margin-right: auto;
+    margin-top: 100px;
+
+    @media screen and ($tablet) {
+      font-size: 22px;
+      line-height: 1.13;
+    }
+
+    @media screen and ($desktop) {
+      font-size: 38px;
+      line-height: 1.15;
+    }
+  }
+  &__heading--accented {
+    display: block;
+    color: var(--accent-color);
+
+    font-family: var(--accent-font);
+    font-weight: 400;
+    font-size: 48px;
+    letter-spacing: 0.04em;
+    line-height: 0.96;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    @media screen and ($tablet) {
+      font-size: 34px;
+      line-height: 0.9;
+    }
+
+    @media screen and ($desktop) {
+      font-size: 58px;
+    }
+  }
+
+  &__btns--list {
+    @extend %list;
+    @include flex_center();
+    margin-top: 19px;
+    margin-left: -8px;
+  }
+
+  &__button {
+    @extend %link;
+    @include button();
+    margin-left: 8px;
+
+    &:hover,
+    &:focus,
+    &.current {
+      @include button(inverted);
+    }
+  }
+
+  &__picture-wrap {
+    margin-top: 92px;
+    margin-left: 110px;
+    margin-right: 20px;
+    z-index: -1;
+  }
+
+  &__circle {
+    position: absolute;
+    border-radius: 50%;
+    top: 30%;
+    left: 30%;
+    width: 350px;
+    height: 350px;
+    background-color: var(--circle-bg-color);
+    z-index: -2;
+  }
+}
