@@ -1,0 +1,51 @@
+.mod-order {
+  position: relative;
+  padding: 35px 20px;
+  text-align: center;
+
+  background-color: var(--accent-text-and-bg-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  @media screen and ($mobile) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    max-width: 450px;
+    width: 100%;
+    padding: 40px;
+
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  @media screen and ($desktop) {
+    max-width: 550px;
+  }
+}
+.mod-order__btn-close {
+}
+.icon__close {
+}
+.form {
+}
+.form__title {
+}
+.form__field {
+}
+.form__label {
+}
+.form__wrap {
+}
+.form__input {
+}
+.form__field--textarea {
+}
+.form__textarea {
+}
+.mod-order__btn {
+}
+.btn__icon {
+}
+.icon-icetruck {
+}
