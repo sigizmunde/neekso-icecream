@@ -19,11 +19,12 @@
             </nav>            
         </div>
         
-            <button class="js-open-menu open-button">
-                <svg class="open-button__icon-menu" width="40" height="40">
-                    <use href="./images/symbols.svg#icon-menu"></use>
+            <button type="button" class="menu__btn-burger js-open-menu" aria-expanded="false" aria-controls="mobile-menu"
+                data-menu-button>
+                <svg class="menu__icon" aria-label="Mobile menu toggle">
+                    <use class="icon-menu" href="./images/symbols.svg#icon-menu"></use>
                 </svg>
-            </button>     
+            </button>
             
             <button type="button" class="btn-order">Buy now
                 <svg class="btn-order__icon">
