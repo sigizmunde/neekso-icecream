@@ -28,14 +28,14 @@
 
 /* ---- grid-item ---- */
 
-// .grid-item {
+// .grid__item {
 //   width: 140px;
 //   height: 140px;
 //   float: left;
 //   margin: 5px;
 // }
 
-// .grid-item--big {
+// .grid__item--big {
 //   width: 290px;
 //   height: 290px;
 // }
@@ -46,11 +46,22 @@
 //   border-radius: 20px;
 // }
 
+.gallery__mobile {
+  @media screen and ($tablet) {
+    display: none;
+  }
+}
+
 .grid {
+  @media screen and ($mobile) {
+    display: none;
+  }
+
   columns: 5 140px;
   column-gap: 10px;
   width: 90%;
   margin: 0 auto;
+
   div {
     width: 140px;
     margin: 0 10px 10px 0;
