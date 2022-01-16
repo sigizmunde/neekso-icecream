@@ -1,5 +1,5 @@
 <div class="backdrop is-hidden" order-modal>
-    <div class="modal mod-order">
+    <div class="modal modal-order">
         <button class="modal__btn-close" aria-label="Close" order-modal-close>
             <svg class="icon__close">
                 <use href="./images/symbols.svg#icon-close"></use>
@@ -7,37 +7,31 @@
         </button>
 
         <form action="#" class="form">
-            <p class="form__title">Heading Form</p>
+            <p class="form__title section__heading">Choose your ice cream</p>
 
             <div class="form__field">
                 <label for="user-name" class="form__label">Your Name*</label>
-                <div class="form__wrap">
-                    <input class="form__input" type="text" name="name" id="user-name" required>
-                </div>
+                <input class="form__input" type="text" name="name" id="user-name" required>
             </div>
 
             <div class="form__field">
-                <label for="phone" class="form__label">Your phone</label>
-                <div class="form__wrap">
-                    <input class="form__input" type="tel" name="phone" id="phone">
-                </div>
+                <label for="phone" class="form__label">Your Phone*</label>
+                <input class="form__input" type="tel" name="phone" id="phone" required>
             </div>
 
             <div class="form__field">
-                <label for="user-email" class="form__label">Your Email*</label>
-                <div class="form__wrap">
-                    <input class="form__input" type="email" name="email" id="user-email" required>
-                </div>
+                <label for="user-email" class="form__label">Your Email</label>
+                <input class="form__input" type="email" name="email" id="user-email">
             </div>
 
             <div class="form__field form__field--textarea">
-                <label class="form__label" for="address">Delivery Address</label>
-                <textarea class="form__textarea" name="comment" id="address" placeholder="Enter"></textarea>
+                <label class="form__label" for="address">Delivery Address*</label>
+                <textarea class="form__textarea" name="comment" id="address" placeholder="Enter your delivery address" required></textarea>
             </div>
 
             <button class="modal__btn" type="submit">Submit
                 <svg class="btn__icon">
-                    <use class="icon-icetruck" href="./images/symbols.svg#icon-icetruck"></use>
+                    <use class="icon-icetruck" href="./images/symbols.svg#icon-icetruck2"></use>
                 </svg>
             </button>
 
