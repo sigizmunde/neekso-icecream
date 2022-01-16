@@ -1,7 +1,34 @@
 <section class="hero__section">
-  <div class="container">
-    <h1 class="hero__heading">
-      ice cream made with <span class="hero__heading--accented">passion</span>
-    </h1>
+  <div class="container hero__container">
+    <div class="hero__wrap">
+      <h1 class="hero__heading">ice cream made with
+        <span class="hero__heading--accented">passion</span>
+      </h1>
+    
+        <list class="hero__btns--list">
+          <li><button type="button" class="hero__button current">Products</button></li>
+          <li><button type="button" class="hero__button">How it’s made?</button></li>
+        </list>
+    </div>
+      <div class="hero__circle"></div>
+      <div class="hero__picture-wrap">
+        <picture>
+          <source srcset="
+                        ./images/hero/hero-desktop@1x.png 1x, 
+                        ./images/hero/hero-desktop@2x.png 2x" height="557"
+            media="($desktop)">
+          <source srcset="
+                        ./images/hero/hero-tablet@1x.png 1x, 
+                        ./images/hero/hero-tablet@2x.png 2x" height="336"
+            media="($tablet)">
+          <source srcset="
+                        ./images/hero/hero-mobile@1x.png 1x, 
+                        ./images/hero/hero-mobile@2x.png 2x" height="410"
+            media="($mobile)">
+          <img src="./images/hero/hero-desktop@1x.png" height="294" alt="Фото мороженого">
+        </picture>
+                         
+      </div>
+
   </div>
 </section>
