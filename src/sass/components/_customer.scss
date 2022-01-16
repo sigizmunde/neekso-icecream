@@ -5,8 +5,8 @@
     text-align: center;
   }
   &__review {
+    margin-top: 52px;
     position: relative;
-    margin-bottom: 52px;
     font-weight: 500;
     font-size: 12px;
     line-height: 2.55;
@@ -30,6 +30,7 @@
   margin-bottom: 29px;
 }
 .review__wrap {
+  margin-bottom: 52px;
   position: relative;
   z-index: -2;
   background-color: #fafafa;
@@ -83,8 +84,9 @@
   background-repeat: no-repeat;
   width: 32px;
   height: 4px;
-  top: 295px;
-  right: 63px;
+  bottom: -55px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .slider__button-active {
   width: 13px;
