@@ -1,0 +1,56 @@
+<div class="backdrop is-hidden" data-modal>
+    <div class="mod-order">
+        <button class="mod-order__btn-close" aria-label="Close" data-modal-close>
+            <svg class="icon__close">
+                <use href="./images/symbols.svg#icon-close"></use>
+            </svg>
+        </button>
+
+        <form action="#" class="form">
+            <p class="form__title">Heading Form</p>
+
+            <div class="form__field">
+                <label for="user-name" class="form__label">Your Name*</label>
+                <div class="form__wrap">
+                    <input class="form__input" type="text" name="name" id="user-name" required>
+                </div>
+            </div>
+
+            <div class="form__field">
+                <label for="phone" class="form__label">Your phone</label>
+                <div class="form__wrap">
+                    <input class="form__input" type="tel" name="phone" id="phone">
+                </div>
+            </div>
+
+            <div class="form__field">
+                <label for="user-email" class="form__label">Your Email*</label>
+                <div class="form__wrap">
+                    <input class="form__input" type="email" name="email" id="user-email" required>
+                </div>
+            </div>
+
+            <div class="form__field form__field--textarea">
+                <label class="form__label" for="address">Delivery Address</label>
+                <textarea class="form__textarea" name="comment" id="address" placeholder="Enter"></textarea>
+            </div>
+
+            <!-- <div class="form__checkbox">
+                <input class="form__input-checkbox" type="checkbox" name="agreement" id="agreement" value="yes">
+                <label for="agreement" class="form__label-checkbox">
+                    <svg class="form__icon-check" width="16" height="15">
+                        <use href="./images/icons.svg#icon-check"></use>
+                    </svg>
+                    <span>Соглашаюсь с рассылкой и принимаю<a class="form__link" href="">Условия договора</a></span>
+                </label>
+            </div> -->
+
+            <button class="mod-order__btn" type="submit">Submit
+                <svg class="btn__icon">
+                    <use class="icon-icetruck" href="./images/symbols.svg#icon-icetruck"></use>
+                </svg>
+            </button>
+
+        </form>
+    </div>
+</div>
