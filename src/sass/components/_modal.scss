@@ -1,5 +1,9 @@
 .modal {
   position: relative;
+  left: 50%;
+  top: 50%;
+  max-width: 450px;
+  width: 95%;
   padding: 35px 20px;
   text-align: center;
 
@@ -8,18 +12,10 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
-  @media screen and ($mobile) {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    max-width: 450px;
-    width: 95%;
-
-    transform: translate(-50%, -50%) scale(1);
-  }
+  transform: translate(-50%, -50%) scale(1);
 
   @media screen and ($desktop) {
-    max-width: 550px;
+    max-width: 520px;
   }
 
   .is-hidden & {
