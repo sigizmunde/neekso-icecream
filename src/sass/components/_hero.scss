@@ -108,6 +108,10 @@
     transform: translateX(-30%);
     width: 171px;
     height: 410px;
+    @media screen and ($tablet) {
+      width: 143px;
+      height: 336px;
+    }
   }
 
   &__circle {
@@ -138,7 +142,7 @@
     position: absolute;
     right: 0;
     bottom: 0;
-    transform: translate(-60%, 0);
+    transform: translate(-45%, 0);
     @media screen and ($mobile) {
       display: none;
     }
@@ -148,7 +152,7 @@
     position: absolute;
     left: 0;
     bottom: 0;
-    transform: translate(50%, -50%);
+    transform: translate(50%, -20%);
     @media screen and ($mobile) {
       display: none;
     }
