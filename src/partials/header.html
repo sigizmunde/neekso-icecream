@@ -1,14 +1,21 @@
 <header class="header__section">
     <div class="container header__container">
-        <div class="header__wrap">
-            <a href="" class="header__logo">
-                <span class="header__logo--wrap">
-                <svg class="header__logo--icon" width="50" height="50">
-                    <use href="./images/symbols.svg#icon-logo"></use>
-                </svg>
-                </span>
-                icecream</a>
-            <nav class="nav">
+            <nav class="main-nav">
+                <a href="" class="header__logo">
+                    <picture>
+                        <source srcset="
+                                    ./images/hero/hero-logo-mobile@1x.png 1x, 
+                                    ./images/hero/hero-logo-mobile@1x.png 2x" height="50" media="($desktop)">
+                        <source srcset="
+                                    ./images/hero/hero-logo-tablet@1x.png 1x, 
+                                    ./images/hero/hero-logo-tablet@2x.png 2x" height="50" media="($tablet)">
+                        <source srcset="
+                                    ./images/hero/hero-logo-mobile@1x.png 1x, 
+                                    ./images/hero/hero-logo-mobile@2x.png 2x" height="50" media="($mobile)">
+                        <img src="./images/hero/hero-logo-mobile@1x.png" height="50" alt="Фото мороженого">
+                    </picture>
+                </a>
+                
                 <ul class="header__nav--list">
                     <li class="header__nav--item"><a href="" class="header__nav--link">Home</a></li>
                     <li class="header__nav--item"><a href="" class="header__nav--link">About us</a></li>
@@ -17,8 +24,7 @@
                     <li class="header__nav--item"><a href="" class="header__nav--link">Contact</a></li>
                 </ul>
             </nav>            
-        </div>
-        
+         
             <button type="button" class="menu__btn-burger js-open-menu" aria-expanded="false" aria-controls="mobile-menu"
                 data-menu-button>
                 <svg class="menu__icon" aria-label="Mobile menu toggle">
@@ -26,11 +32,12 @@
                 </svg>
             </button>
             
-            <button type="button" class="btn-order">Buy now
+            <button type="button" class="order-btn">Buy now
                 <svg class="btn-order__icon">
                     <use class="icon-angle" href="./images/symbols.svg#icon-angle"></use>
                 </svg>
             </button>
+        <!-- </div> -->
 
     </div>
 </header>

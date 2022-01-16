@@ -1,6 +1,7 @@
 .hero {
   &__section {
     position: relative;
+    overflow: hidden;
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
@@ -8,10 +9,11 @@
     padding-top: 27px;
     padding-left: 20px;
     background-color: var(--hero-bg-color);
-    z-index: -4;
+    z-index: 20;
   }
 
   &__container {
+    // overflow: hidden;
     width: 100%;
     padding: 0;
   }
@@ -36,7 +38,7 @@
     text-align: left;
     text-transform: uppercase;
     margin-right: auto;
-    margin-top: 180px;
+    margin-top: 100px;
 
     @media screen and ($tablet) {
       font-size: 22px;
@@ -92,8 +94,8 @@
 
   &__picture-wrap {
     margin-top: 92px;
-    margin-left: 160px;
-    margin-right: auto;
+    margin-left: 110px;
+    margin-right: 20px;
     z-index: -1;
   }
 
