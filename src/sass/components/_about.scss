@@ -25,6 +25,7 @@
     padding-bottom: 20px;
   }
 }
+// bgc; bgc-hover
 .about__heading {
   @media screen and ($tablet) {
     margin-bottom: 50px;
@@ -131,15 +132,8 @@
   fill: currentColor;
 }
 #about-more {
-  // display: none;
-  // opacity: 0;
   transform: translateY(0);
-  // visibility: hidden;
 }
 .about__more {
   transform: translateY(100%);
-
-  // opacity: 1;
-  // visibility: visible;
-  // transition: opacity, visibility var(--transition-params);
 }
