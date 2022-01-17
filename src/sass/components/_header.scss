@@ -107,6 +107,12 @@
   width: 100%;
   height: 60px;
   background-color: var(--card2-color);
+  @media screen and ($tablet) {
+    height: 94px;
+  }
+  @media screen and ($desktop) {
+    height: 94px;
+  }
 }
 
 .order-btn {
