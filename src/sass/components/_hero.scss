@@ -161,6 +161,30 @@
     line-height: 1.5;
     letter-spacing: 0.04em;
     text-align: left;
+    margin-bottom: 5px;
+  }
+
+  &__small--button {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: var(--main-bg-color);
+    color: var(--accent-color);
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    margin-top: auto;
+
+    &:hover,
+    &:focus {
+      background-color: var(--accent-color);
+      color: var(--main-bg-color);
+    }
+  }
+
+  &__small--button-icon {
+    transform: translateY(-35%);
+    fill: currentColor;
   }
 
   &__girl--wrap {
