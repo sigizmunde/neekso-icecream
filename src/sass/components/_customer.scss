@@ -1,22 +1,16 @@
 .customer {
-  padding-top: 40px;
-  padding-bottom: 60px;
   &__section {
+    padding-top: 40px;
+    padding-bottom: 45px;
     text-align: center;
-  }
-  &__photo {
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 29px;
   }
   &__review {
     position: relative;
-    padding: 43px 61px 26px 61px;
-    margin-bottom: 52px;
     font-weight: 500;
     font-size: 12px;
     line-height: 2.55;
-    background-color: #fafafa;
+    background-size: 1px 30px;
+    background-image: linear-gradient(to top, #e1e1e1 1px, #e1e1e1 1px, transparent 1px);
   }
   &__title {
     margin-bottom: 35px;
@@ -24,6 +18,22 @@
     font-size: 14px;
     line-height: 1.86;
   }
+}
+.photo-thumb {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 29px;
+}
+.review__wrap {
+  margin-bottom: 52px;
+  position: relative;
+  z-index: -2;
+  background-color: #fafafa;
+  padding: 43px 62px 26px 62px;
 }
 .slider {
   @extend %list;
@@ -40,9 +50,9 @@
   &__button {
     width: 100%;
     height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
     border: none;
     border-radius: 50%;
     background-color: #d9d9d9;
@@ -51,6 +61,37 @@
     }
   }
 }
-.review-icon {
+.customer__review::before {
+  content: '';
   position: absolute;
+  z-index: -1;
+  left: 0;
+  top: -5%;
+  display: inline-block;
+  background-image: url('../images/quote.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 54px;
+  height: 40px;
+}
+.customer__review::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  background-image: url('../images/customer/dots.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 4px;
+  bottom: -55px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.slider__button-active {
+  width: 13px;
+  height: 100%;
+  border: none;
+  flex-shrink: 0;
+  background-image: url('../images/home.svg');
+  background-size: cover;
 }

@@ -1,6 +1,9 @@
 .container--advantages {
+    @media screen and ($mobile) {
+        max-width: 320px;
+    }
     @media screen and ($tablet) {
-        padding-left: 36px;
+        padding: 0 36px;
     }
     @media screen and ($desktop) {
         padding: 0 20px;
@@ -10,19 +13,14 @@
     background-color: var(--secondary-bg-color);
 
     @media screen and ($mobile) {
-        padding-top: 20px;
         padding-bottom: 49px;
     }
     @media screen and ($tablet) {
-        padding-top: 33px;
         padding-bottom: 70px;
-    }
-    @media screen and ($desktop) {
-        padding-top: 20px;
     }
 }
 .advantages__list {
-    list-style-type: none;
+    @extend %list;
     @media screen and ($tablet) {
         display: flex;
         flex-wrap: wrap;
@@ -62,7 +60,6 @@
             margin-right: 0;
         }
     }
-
 }
 .advantages__name {
     color: var(--accent-color);
@@ -71,18 +68,14 @@
     font-size: 34px;
     letter-spacing: 0.04em;
     line-height: 1.145;
-
     text-align: left;
-    text-transform: uppercase;
 
     @media screen and ($tablet) {
         font-size: 48px;
     }
-
     @media screen and ($desktop) {
         font-size: 58px;
     }
-    
     &::before {
         display: block;
         content: '';
@@ -103,12 +96,14 @@
         }
     }
     &--milk::before {
+        width: 33px;
         background-image: url(../images/milk.svg);
     }
     &--fruit::before {
         background-image: url(../images/fruit.svg);
     }
     &--icecream::before {
+        width: 44px;
         background-image: url(../images/icecream.svg);
     }
 }
@@ -117,6 +112,7 @@
     font-family: var(--main-font);
     font-style: normal;
     font-weight: 700;
+    letter-spacing: 0;
     color: var(--primary-text-color);
 
     @media screen and ($mobile) {

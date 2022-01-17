@@ -105,20 +105,19 @@
     border: none;
   }
 
-  &:active,
   &:focus,
   &:hover {
     @if ($type == normal or $type == small-normal) {
-      color: var(--inverted-text-color);
-      background-color: var(--accent-color);
+      // color: var(--inverted-text-color);
+      background-color: #ecebeb;
       border: none;
     } @else if ($type == inverted or $type == small-inverted) {
       color: var(--accent-color);
-      background-color: var(--main-bg-color);
+      background-color: #ecebeb;
       border: none;
     } @else {
-      color: var(--inverted-text-color);
-      background-color: var(--accent-color);
+      // color: var(--inverted-text-color);
+      background-color: #ecebeb;
       border: none;
     }
   }
