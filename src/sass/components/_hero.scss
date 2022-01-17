@@ -112,6 +112,34 @@
 }
 
 .hero__picture-box {
-  position: absolute;
-  top: 0;
+  position: relative;
+  width: 171px;
+  height: 410px;
+  // background: rgba(0, 0, 0, 1);
+  margin-top: 92px;
+  // margin-left: 110px;
+  // margin-right: 20px;
+  z-index: -1;
+
+  & img {
+    position: absolute;
+    left: -300px;
+    width: 100%;
+    // animation-name: fadeinIcecream;
+    // animation-duration: 3000ms;
+    transform: translateX(400px);
+  }
+
+  & img:nth-child(1) {
+    transition: translateX 3000ms ease-in-out;
+  }
+}
+
+@keyframes fadeinIcecream {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(400px);
+  }
 }
