@@ -17,7 +17,7 @@
     padding-left: 20px;
     padding-right: 20px;
     @media screen and ($desktop) {
-      height: 600px;
+      height: 650px;
     }
   }
 
@@ -91,8 +91,10 @@
     margin-left: -8px;
     justify-content: left;
     @media screen and ($desktop) {
-      margin-top: 25px;
+      // margin-top: 25px;
       margin-left: 85px;
+      // margin-left: -8px;
+      padding-top: 45px;
     }
   }
 
@@ -227,11 +229,11 @@
     fill: currentColor;
   }
 
-  &__girl--wrap {
+  &__girl-wrap {
     position: absolute;
     right: 0;
     bottom: 0;
-    transform: translate(-45%, 0);
+    transform: translate(-25%, 0);
     @media screen and ($mobile) {
       display: none;
     }
@@ -241,12 +243,17 @@
     position: absolute;
     left: 0;
     bottom: 0;
-    transform: translate(22%, -17%);
+    @media screen and ($tablet) {
+      transform: translate(22%, -17%);
+      overflow-y: scroll;
+      transition: transform 1000ms;
+    }
     @media screen and ($desktop) {
       transform: translate(32%, -17%);
     }
     @media screen and ($mobile) {
-      display: none;
+      transform: translateX(-101%);
+      // display: none;
     }
   }
 }
@@ -261,7 +268,7 @@
     position: absolute;
     right: 0;
     top: 0;
-    transform: translate(-140%, 77%);
+    transform: translate(-120%, 77%);
   }
   @media screen and ($desktop) {
     display: block;
