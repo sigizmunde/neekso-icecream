@@ -118,7 +118,7 @@
   margin-top: 92px;
   z-index: -1;
 
-  & img {
+  & picture {
     position: absolute;
     left: -300px;
     width: 100%;
@@ -130,33 +130,33 @@
   $animationSpeed: 1000ms;
   $animationLayer: 10ms;
 
-  & img:nth-child(1) {
+  & picture:nth-child(1) {
     animation-duration: $animationSpeed;
   }
-  & img:nth-child(2) {
+  & picture:nth-child(2) {
     animation-duration: $animationSpeed + $animationLayer * 2;
   }
-  & img:nth-child(3) {
+  & picture:nth-child(3) {
     animation-duration: $animationSpeed + $animationLayer * 3;
   }
-  & img:nth-child(4) {
+  & picture:nth-child(4) {
     animation-duration: $animationSpeed + $animationLayer * 4;
   }
-  & img:nth-child(5) {
+  & picture:nth-child(5) {
     animation-duration: $animationSpeed + $animationLayer * 5;
   }
-  & img:nth-child(6) {
+  & picture:nth-child(6) {
     animation-duration: $animationSpeed + $animationLayer * 6;
   }
-  & img:nth-child(7) {
+  & picture:nth-child(7) {
     animation-duration: $animationSpeed + $animationLayer * 7;
   }
-  & img:nth-child(8) {
+  & picture:nth-child(8) {
     opacity: 0;
     animation: flowCream $animationSpeed 700ms ease-in-out forwards,
       fadeinIcecream $animationSpeed forwards;
   }
-  & img:nth-child(9) {
+  & picture:nth-child(9) {
     opacity: 0;
     animation: flowCream $animationSpeed 1200ms ease-in-out forwards,
       fadeinIcecream $animationSpeed forwards;
