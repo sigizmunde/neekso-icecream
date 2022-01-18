@@ -194,7 +194,7 @@
   transform: rotateY(-180deg);
 }
 
-.products-cards__item:hover .products-cards__wrap {
+.products-cards__item.flip .products-cards__wrap {
   transform: rotateY(-180deg);
 }
 

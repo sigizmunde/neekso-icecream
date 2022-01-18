@@ -3,7 +3,7 @@
     <p class="section__subtitle">100% natural</p>
     <h2 class="section__heading section__heading--products">Products</h2>
     <ul class="products-cards__list">
-      <li class="products-cards__item">
+      <li class="products-cards__item" id="card-rose">
         <div class="products-cards__wrap products-cards__wrap--rose">
           <div class="products-cards__flip-front">
             <h3 class="products-cards__title">ice cream</h3>
@@ -26,7 +26,7 @@
           </div>
         </div>
       </li>
-      <li class="products-cards__item">
+      <li class="products-cards__item" id="card-yellow">
         <div class="products-cards__wrap products-cards__wrap--yellow">
           <div class="products-cards__flip-front">
             <h3 class="products-cards__title">ice coffee</h3>
@@ -49,7 +49,7 @@
           </div>
         </div>
       </li>
-      <li class="products-cards__item flip">
+      <li class="products-cards__item" id="card-green">
         <div class="products-cards__wrap products-cards__wrap--green">
           <div class="products-cards__flip-front">
             <h3 class="products-cards__title">milkshakes</h3>
@@ -57,7 +57,7 @@
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
               incididunt ut labore et. dolore magna aliqua facilisis.
             </p>
-            <button type="button" class="products__button">
+            <button type="button" class="products__button my-button">
               <svg class="products__button-icon" width="15" height="15">
                 <use href="./images/symbols.svg#icon-arrow"></use>
               </svg>
@@ -75,3 +75,20 @@
     </ul>
   </div>
 </section>
+
+<script>
+  const cardRose = document.querySelector('#card-rose');
+  cardRose.addEventListener('click', () => {
+    cardRose.classList.toggle('flip');
+  });
+
+  cardYellow = document.querySelector('#card-yellow');
+  cardYellow.addEventListener('click', () => {
+    cardYellow.classList.toggle('flip');
+  });
+
+  cardGreen = document.querySelector('#card-green');
+  cardGreen.addEventListener('click', () => {
+    cardGreen.classList.toggle('flip');
+  });
+</script>
