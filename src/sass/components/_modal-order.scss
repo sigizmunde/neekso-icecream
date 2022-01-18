@@ -33,6 +33,20 @@
   }
 }
 
+.form__field--phone {
+  @media screen and ($tablet) {
+    float: left;
+    width: 45%;
+  }
+}
+
+.form__field--email {
+  @media screen and ($tablet) {
+    float: right;
+    width: 45%;
+  }
+}
+
 .form__field--textarea {
   margin-bottom: 30px;
 }
