@@ -111,11 +111,13 @@
 
   color: var(--additional-text-color);
   margin-bottom: 20px;
+
   @media screen and ($tablet) {
     margin-bottom: 62px;
     letter-spacing: 0.04em;
   }
 }
+
 .about__button {
   @include button(normal, 176px);
   margin: 0;
