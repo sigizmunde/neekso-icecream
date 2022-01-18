@@ -189,6 +189,7 @@
   z-index: 2;
   transform: rotateY(0deg);
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .products-cards__flip-back {
