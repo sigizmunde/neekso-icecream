@@ -225,17 +225,17 @@
       padding: 0;
       width: 161px;
 
-      transition: color var(--transition-params), background-color var(--transition-params);
+      // transition: color var(--transition-params), background-color var(--transition-params);
 
       @media screen and ($tablet) {
         width: 191px;
       }
-      &:active,
-      &:focus,
-      &:hover {
-        color: var(--accent-color);
-        background-color: #ecebeb;
-      }
+      // &:active,
+      // &:focus,
+      // &:hover {
+      //   color: var(--accent-color);
+      //   background-color: #ecebeb;
+      // }
     }
     &--normal {
       @include button(normal);
@@ -243,16 +243,16 @@
       padding: 0;
       width: 161px;
 
-      transition: color var(--transition-params), background-color var(--transition-params);
+      // transition: color var(--transition-params), background-color var(--transition-params);
       @media screen and ($tablet) {
         width: 174px;
       }
-      &:active,
-      &:focus,
-      &:hover {
-        color: var(--accent-color);
-        background-color: #ecebeb;
-      }
+      // &:active,
+      // &:focus,
+      // &:hover {
+      //   color: var(--accent-color);
+      //   background-color: #ecebeb;
+      // }
     }
   }
   &__icon {
