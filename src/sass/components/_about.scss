@@ -32,6 +32,7 @@
   }
 }
 .about__box {
+  width: 100%;
   @media screen and ($tablet) {
     display: flex;
     justify-content: space-around;
@@ -42,13 +43,11 @@
   }
 }
 .about__thumb-cow {
-  width: 320px;
-
   @media screen and ($mobile) {
-    width: 280px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 46px;
+    min-width: 260px;
+    // margin-left: auto;
+    // margin-right: auto;
+    // margin-bottom: 46px;
   }
   @media screen and ($tablet) {
     width: 350px;
@@ -64,11 +63,12 @@
   text-align: left;
   line-height: 1.62;
 
-  width: 220px;
+  width: 100%;
 
   @media screen and($mobile) {
-    margin-left: auto;
-    margin-right: auto;
+    padding-top: 46px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
   @media screen and ($tablet) {
     font-size: 14px;
@@ -86,8 +86,8 @@
 .about__caption {
   color: var(--primary-text-color);
 
-  margin-left: auto;
-  margin-right: auto;
+  // margin-left: auto;
+  // margin-right: auto;
   margin-bottom: 30px;
   @media screen and ($tablet) {
     margin-bottom: 25px;
