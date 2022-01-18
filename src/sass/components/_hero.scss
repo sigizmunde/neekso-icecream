@@ -335,6 +335,7 @@
 }
 
 .milk__image {
+  overflow: hidden;
   @media screen and ($tablet) {
     width: 124px;
     height: 126px;
