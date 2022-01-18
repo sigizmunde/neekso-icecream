@@ -113,8 +113,6 @@
     @include button(small-normal);
     margin-left: 8px;
 
-    &:hover,
-    &:focus,
     &.current {
       @include button(small-inverted);
     }
