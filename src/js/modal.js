@@ -1,17 +1,17 @@
 (() => {
     const refs = {
-      openOrderBtn: document.querySelector('[order-modal-open]'),
-      openOrderMenuBtn: document.querySelector('[order-modal-open-menu]'),
-      closeOrderBtn: document.querySelector('[order-modal-close]'),
-        modalOrder: document.querySelector('[order-modal]'),
+      openOrderBtn: document.querySelector('[data-order-modal-open]'),
+      openOrderMenuBtn: document.querySelector('[data-order-modal-open-menu]'),
+      closeOrderBtn: document.querySelector('[data-order-modal-close]'),
+        modalOrder: document.querySelector('[data-order-modal]'),
       
-        openLocationBtn: document.querySelector('[location-modal-open]'),
-      closeLocationBtn: document.querySelector('[location-modal-close]'),
-        modalLocation: document.querySelector('[location-modal]'),
+        openLocationBtn: document.querySelector('[data-location-modal-open]'),
+      closeLocationBtn: document.querySelector('[data-location-modal-close]'),
+        modalLocation: document.querySelector('[data-location-modal]'),
       
-        openFranchiseBtn: document.querySelector('[franchise-modal-open]'),
-      closeFranchiseBtn: document.querySelector('[franchise-modal-close]'),
-      modalFranchise: document.querySelector('[franchise-modal]'),
+        openFranchiseBtn: document.querySelector('[data-franchise-modal-open]'),
+      closeFranchiseBtn: document.querySelector('[data-franchise-modal-close]'),
+      modalFranchise: document.querySelector('[data-franchise-modal]'),
     };
   
     refs.openOrderBtn.addEventListener('click', toggleModalOrder);
