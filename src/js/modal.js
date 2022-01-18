@@ -1,6 +1,7 @@
 (() => {
     const refs = {
       openOrderBtn: document.querySelector('[order-modal-open]'),
+      openOrderMenuBtn: document.querySelector('[order-modal-open-menu]'),
       closeOrderBtn: document.querySelector('[order-modal-close]'),
         modalOrder: document.querySelector('[order-modal]'),
       
@@ -14,6 +15,7 @@
     };
   
     refs.openOrderBtn.addEventListener('click', toggleModalOrder);
+    refs.openOrderMenuBtn.addEventListener('click', toggleModalOrder);
     refs.closeOrderBtn.addEventListener('click', toggleModalOrder);
     refs.openLocationBtn.addEventListener('click', toggleModalLocation);
     refs.closeLocationBtn.addEventListener('click', toggleModalLocation);

@@ -70,7 +70,10 @@
       margin-left: 85px;
       margin-bottom: 25px;
     }
+
+    transition: all var(--transition-params);
   }
+
   &__heading--accented {
     display: block;
     color: var(--accent-color);
@@ -154,8 +157,8 @@
     @media screen and ($desktop) {
       width: 538px;
       height: 538px;
-      // transform: translate(-56%, -39%);
     }
+    transition: all var(--transition-params);
   }
 
   &__small-circle {
@@ -218,6 +221,7 @@
     @media screen and ($mobile) {
       display: none;
     }
+    transition: all var(--transition-params);
   }
 
   &__milk-wrap {
@@ -226,7 +230,6 @@
     bottom: 0;
     @media screen and ($tablet) {
       transform: translate(22%, -17%);
-      overflow-y: scroll;
       transition: transform 1000ms;
     }
     @media screen and ($desktop) {
@@ -315,6 +318,8 @@
     transform: translateY(-40%);
     fill: currentColor;
   }
+
+  transition: all var(--transition-params);
 }
 
 .girl__image {
@@ -330,11 +335,11 @@
 
 .milk__image {
   @media screen and ($tablet) {
-    width: 124px;
+    // width: 124px;
     height: 126px;
   }
   @media screen and ($desktop) {
-    width: 188px;
+    // width: 188px;
     height: 191px;
   }
 }

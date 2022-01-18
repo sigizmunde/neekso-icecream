@@ -2,6 +2,10 @@ body {
   font-family: var(--main-font);
 }
 
+image {
+  display: block;
+}
+
 .container {
   margin: 0 auto;
   padding: 0 20px;
@@ -20,6 +24,8 @@ body {
     width: 1200px;
     padding: 0 74px;
   }
+
+  transition: all var(--transition-params);
 }
 
 .section__heading {
@@ -45,6 +51,8 @@ body {
   &--left {
     text-align: left;
   }
+
+  transition: all var(--transition-params);
 }
 
 .section__subtitle {
@@ -73,4 +81,6 @@ body {
   &--left {
     text-align: left;
   }
+
+  transition: all var(--transition-params);
 }
