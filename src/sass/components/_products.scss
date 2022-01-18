@@ -187,12 +187,14 @@
 
 .products-cards__flip-front {
   z-index: 2;
+  -webkit-transform: rotateY(0deg);
   transform: rotateY(0deg);
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
 
 .products-cards__flip-back {
+  -webkit-transform: rotateY(-180deg);
   transform: rotateY(-180deg);
   padding-right: 30px;
 
@@ -206,6 +208,7 @@
 }
 
 .products-cards__item.flip .products-cards__wrap {
+  -webkit-transform: rotateY(-180deg);
   transform: rotateY(-180deg);
 }
 
