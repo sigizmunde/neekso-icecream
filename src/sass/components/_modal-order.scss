@@ -1,10 +1,13 @@
 .form__title {
   margin-bottom: 14px;
-  font-size: 24px;
+  font-size: 20px;
+
+  @media screen and ($tablet) {
+    font-size: 24px;
+  }
 }
 .form__field {
   margin-bottom: 10px;
-  text-align: left;
 
   &--phone {
     @media screen and ($tablet) {
@@ -17,6 +20,12 @@
     @media screen and ($tablet) {
       float: right;
       width: 45%;
+    }
+  }
+
+  &--delivery {
+    @media screen and ($tablet) {
+      clear: both;
     }
   }
 }
@@ -76,7 +85,7 @@
 }
 
 .form__field--textarea {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 .form__textarea {
@@ -110,7 +119,8 @@
 }
 
 .form__checkbox {
-  margin-bottom: 30px;
+  display: flex;
+  margin-bottom: 20px;
 }
 
 .form__input-checkbox {
@@ -149,7 +159,7 @@
   }
 
   .form__input-checkbox:focus:checked + .form__label-checkbox & {
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    box-shadow: 0 0 0 0.2rem rgba(212, 20, 67, 0.25);
     outline: -webkit-focus-ring-color auto 0px;
   }
 
