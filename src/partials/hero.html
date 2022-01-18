@@ -1,38 +1,92 @@
 <section class="hero__section">
   <div class="container hero__container">
     <div class="hero__wrap">
-      <h1 class="hero__heading">ice cream made with
+      <h1 class="hero__heading">
+        ice cream made with
         <span class="hero__heading--accented">passion</span>
       </h1>
-    
-        <list class="hero__btns--list">
-          <li><button type="button" class="hero__button current">Products</button></li>
-          <li><button type="button" class="hero__button">How it’s made?</button></li>
-        </list>
+
+      <ul class="hero__btns-list">
+        <li><a href="#products" class="hero__button current">Products</a></li>
+        <li><a href="#about" class="hero__button">How it’s made?</a></li>
+      </ul>
     </div>
-      <div class="hero__circle"></div>
-      <div class="hero__picture-wrap">
-        <picture>
-          <source srcset="
-                        ./images/hero/hero-desktop@1x.png 1x, 
-                        ./images/hero/hero-desktop@2x.png 2x" height="557"
-            media="($desktop)">
-          <source srcset="
-                        ./images/hero/hero-tablet@1x.png 1x, 
-                        ./images/hero/hero-tablet@2x.png 2x" height="336"
-            media="($tablet)">
-          <source srcset="
-                        ./images/hero/hero-mobile@1x.png 1x, 
-                        ./images/hero/hero-mobile@2x.png 2x" height="410"
-            media="($mobile)">
-          <img class="hero__image" src="./images/hero/hero-desktop@1x.png" height="294" alt="Photo icecream">
-        </picture>
-                         
-      </div>
-      <div class="hero__bottom--wrap">
-        
-      </div>
+    <div class="hero__circle"></div>
+    <div class="hero__picture-wrap">
+      <picture>
+        <source
+          srcset="./images/hero/hero-desktop@1x.png 1x, ./images/hero/hero-desktop@2x.png 2x"
+          media="(min-width: 1280px)"
+        />
+        <source
+          srcset="./images/hero/hero-tablet@1x.png 1x, ./images/hero/hero-tablet@2x.png 2x"
+          media="(min-width: 768px)"
+        />
+        <source
+          srcset="./images/hero/hero-mobile@1x.png 1x, ./images/hero/hero-mobile@2x.png 2x"
+          media="(max-width: 767px)"
+        />
+        <img class="hero__image" src="./images/hero/hero-desktop@1x.png" alt="Photo icecream" />
+      </picture>
+    </div>
 
+    <ul class="numbers">
+      <li class="numbers__item">
+        <h2 class="numbers__title">16</h2>
+        <p class="numbers__text">cafes</p>
+        <div class="hero__small-circle"></div>
+      </li>
+      <li class="numbers__item">
+        <h2 class="numbers__title">23</h2>
+        <p class="numbers__text">food trucks</p>
+        <div class="hero__small-circle"></div>
+      </li>
+    </ul>
 
+    <div class="hero__milk-wrap">
+      <picture>
+        <source
+          srcset="./images/hero/milk-desktop@1x.png 1x, ./images/hero/milk-desktop@2x.png 2x"
+          media="(min-width: 1280px)"
+        />
+        <source
+          srcset="./images/hero/milk-tablet@1x.png 1x, ./images/hero/milk-tablet@2x.png 2x"
+          media="(min-width: 768px)"
+        />
+        <img class="milk__image" src="./images/hero/milk-tablet@1x.png" alt="Photo milk" />
+      </picture>
+    </div>
+
+    <div class="hero__bottom-wrap">
+      <p class="hero__bottom-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et
+      </p>
+      <button type="button" class="small-button">
+        <svg class="small-button__icon" width="7" height="7">
+          <use href="./images/symbols.svg#icon-arrow"></use>
+        </svg>
+      </button>
+    </div>
+
+    <div class="hero__girl-wrap">
+      <picture>
+        <source
+          srcset="
+            ./images/hero/hero-girl-desktop@1x.png 1x,
+            ./images/hero/hero-girl-desktop@2x.png 2x
+          "
+          media="(min-width: 1280px)"
+        />
+        <source
+          srcset="
+            ./images/hero/hero-girl-tablet@1x.png 1x,
+            ./images/hero/hero-girl-tablet@2x.png 2x
+          "
+          media="(min-width: 768px)"
+        />
+        <img class="girl__image" src="./images/hero/hero-girl-desktop@1x.png" alt="Photo girl" />
+      </picture>
+    </div>
   </div>
 </section>
