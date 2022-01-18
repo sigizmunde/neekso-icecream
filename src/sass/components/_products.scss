@@ -54,6 +54,7 @@
   position: relative;
   width: 100%;
   height: 485px;
+  cursor: pointer;
 
   @media screen and($mobile) {
     &:not(:last-child) {
@@ -163,6 +164,10 @@
   top: 0;
   left: 0;
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   padding-top: 160px;
   padding-bottom: 40px;
   padding-left: 40px;
@@ -181,10 +186,6 @@
 }
 
 .products-cards__flip-front {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
   z-index: 2;
   transform: rotateY(0deg);
   backface-visibility: hidden;
@@ -192,6 +193,15 @@
 
 .products-cards__flip-back {
   transform: rotateY(-180deg);
+  padding-right: 30px;
+
+  @media screen and($tablet) {
+    padding-right: 20px;
+  }
+
+  @media screen and($desktop) {
+    padding-right: 35px;
+  }
 }
 
 .products-cards__item.flip .products-cards__wrap {
@@ -250,6 +260,24 @@
 
 .products-cards__flip-back-text {
   background-color: inherit;
+  max-height: 215px;
+  overflow-y: auto;
+
+  margin-bottom: auto;
+  padding-right: 10px;
+
+  &::-webkit-scrollbar {
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+
+  @media screen and($desktop) {
+    max-height: 250px;
+  }
 }
 
 .products__button {
@@ -274,4 +302,8 @@
 .products__button-icon {
   transform: translateY(20%);
   fill: currentColor;
+}
+
+.products__button-icon--back {
+  transform: translateY(20%) scale(-1);
 }
