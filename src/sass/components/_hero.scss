@@ -16,11 +16,27 @@
     padding: 0;
     padding-left: 20px;
     padding-right: 20px;
+    @media screen and ($tablet) {
+      padding-left: 34px;
+      padding-right: 34px;
+    }
+    @media screen and ($desktop) {
+      padding-left: 46px;
+      padding-right: 46px;
+      // height: 650px;
+    }
   }
 
   &__wrap {
     position: absolute;
     z-index: 2;
+    margin-top: 100px;
+    @media screen and ($tablet) {
+      margin-top: 25px;
+    }
+    @media screen and ($desktop) {
+      margin-top: 25px;
+    }
   }
 
   &__heading {
@@ -38,21 +54,26 @@
     text-align: left;
     text-transform: uppercase;
     margin-right: auto;
-    margin-top: 100px;
 
     @media screen and ($tablet) {
       width: 162px;
       height: 80px;
       font-size: 22px;
       line-height: 1.13;
-      margin-top: 15px;
     }
 
     @media screen and ($desktop) {
+      width: 227px;
+      height: 137px;
       font-size: 38px;
       line-height: 1.15;
+      margin-left: 85px;
+      margin-bottom: 25px;
     }
+
+    transition: all var(--transition-params);
   }
+
   &__heading--accented {
     display: block;
     color: var(--accent-color);
@@ -76,12 +97,18 @@
     }
   }
 
-  &__btns--list {
+  &__btns-list {
     @extend %list;
     @include flex_center();
     margin-top: 19px;
     margin-left: -8px;
     justify-content: left;
+    @media screen and ($desktop) {
+      // margin-top: 25px;
+      margin-left: 85px;
+      // margin-left: -8px;
+      padding-top: 45px;
+    }
   }
 
   &__button {
@@ -89,8 +116,6 @@
     @include button(small-normal);
     margin-left: 8px;
 
-    &:hover,
-    &:focus,
     &.current {
       @include button(small-inverted);
     }
@@ -99,8 +124,6 @@
   &__picture-wrap {
     width: 100%;
     margin-top: 92px;
-    // margin-left: 110px;
-    // margin-right: 20px;
     z-index: -1;
   }
 
@@ -110,13 +133,20 @@
     transform: translateX(-30%);
     width: 171px;
     height: 410px;
+    @media screen and ($tablet) {
+      width: 143px;
+      height: 336px;
+    }
+    @media screen and ($desktop) {
+      width: 236px;
+      height: 557px;
+      transform: translate(-30%, 0);
+    }
   }
 
   &__circle {
     position: absolute;
     border-radius: 50%;
-    // top: 30%;
-    // left: 30%;
     left: 60%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -124,11 +154,192 @@
     height: 350px;
     background-color: var(--circle-bg-color);
     z-index: -2;
+    @media screen and ($desktop) {
+      width: 538px;
+      height: 538px;
+    }
+    transition: all var(--transition-params);
   }
 
-  &__bottom--wrap {
+  &__small-circle {
+    position: absolute;
+    border-radius: 50%;
+    right: 0;
+    top: 0;
+    transform: translate(55%, -20%);
+    width: 16px;
+    height: 16px;
+    background-color: var(--main-bg-color);
+    z-index: -1;
+    @media screen and ($desktop) {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  &__bottom-wrap {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: translate(130%, -117%);
     @media screen and ($mobile) {
       display: none;
     }
+    @media screen and ($tablet) {
+      width: 114px;
+      height: 48px;
+    }
+    @media screen and ($desktop) {
+      width: 200px;
+      height: 78px;
+      transform: translate(122%, -117%);
+    }
+  }
+
+  &__bottom-text {
+    width: 100%;
+    color: var(--main-bg-color);
+    font-family: var(--main-font);
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    text-align: left;
+    margin-bottom: 5px;
+    @media screen and ($desktop) {
+      font-size: 14px;
+      line-height: 1.4;
+      margin-bottom: 17px;
+    }
+  }
+
+  &__girl-wrap {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: translate(-25%, 0);
+    @media screen and ($mobile) {
+      display: none;
+    }
+    transition: all var(--transition-params);
+  }
+
+  &__milk-wrap {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    @media screen and ($tablet) {
+      transform: translate(22%, -17%);
+      transition: transform 1000ms;
+    }
+    @media screen and ($desktop) {
+      transform: translate(32%, -17%);
+    }
+    @media screen and ($mobile) {
+      transform: translateX(-101%);
+      // display: none;
+    }
+  }
+}
+
+.numbers {
+  position: relative;
+  @extend %list;
+  display: none;
+  margin-top: -13px;
+  @media screen and ($tablet) {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(-120%, 77%);
+  }
+  @media screen and ($desktop) {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(-100%, 90%);
+  }
+
+  &__item {
+    margin-top: 13px;
+    position: relative;
+  }
+  &__title {
+    color: var(--accent-color);
+    font-family: var(--accent-font);
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 1.14;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-align: right;
+    @media screen and ($desktop) {
+      font-size: 46px;
+    }
+  }
+  &__text {
+    color: var(--main-bg-color);
+    font-family: var(--main-font);
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 1.25;
+    letter-spacing: 0.04em;
+    text-align: right;
+    @media screen and ($desktop) {
+      font-size: 14px;
+    }
+  }
+}
+
+.small-button {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: var(--main-bg-color);
+  color: var(--accent-color);
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  margin-top: auto;
+  @media screen and ($desktop) {
+    width: 26px;
+    height: 26px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+    color: var(--main-bg-color);
+  }
+
+  &__icon {
+    transform: translateY(-40%);
+    fill: currentColor;
+  }
+
+  transition: all var(--transition-params);
+}
+
+.girl__image {
+  @media screen and ($tablet) {
+    width: 168px;
+    height: 133px;
+  }
+  @media screen and ($desktop) {
+    width: 293px;
+    height: 232px;
+  }
+}
+
+.milk__image {
+  @media screen and ($tablet) {
+    // width: 124px;
+    height: 126px;
+  }
+  @media screen and ($desktop) {
+    // width: 188px;
+    height: 191px;
   }
 }

@@ -39,6 +39,14 @@
 // $type — normal, inverted, small-normal, small-inverted
 // $width — if defined then ads fixed width parameter
 @mixin button($type: normal, $width: null) {
+  $bgc-hover: #ccc;
+  $bgc: teal;
+  background-color: transparent;
+  position: relative;
+  overflow: hidden;
+  z-index: 3;
+  transition: all 0.85s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
   @include flex_center();
 
   font-family: inherit;
@@ -58,7 +66,8 @@
     border-radius: 22px;
     padding: 0 22px;
     color: var(--accent-color);
-    background-color: var(--main-bg-color);
+    // background-color: var(--main-bg-color);
+    $bgc: var(--main-bg-color);
     border: none;
   } @else if $type == inverted {
     font-weight: 700;
@@ -67,7 +76,8 @@
     border-radius: 22px;
     padding: 0 22px;
     color: var(--inverted-text-color);
-    background-color: var(--accent-color);
+    // background-color: var(--accent-color);
+    $bgc: var(--accent-color);
     border: none;
   } @else if $type == small-normal {
     font-weight: 400;
@@ -82,7 +92,8 @@
       padding: 0 22px;
     }
     color: var(--accent-color);
-    background-color: var(--main-bg-color);
+    // background-color: var(--main-bg-color);
+    $bgc: var(--main-bg-color);
     border: none;
   } @else if $type == small-inverted {
     font-weight: 400;
@@ -97,28 +108,67 @@
       padding: 0 22px;
     }
     color: var(--inverted-text-color);
-    background-color: var(--accent-color);
+    // background-color: var(--accent-color);
+    $bgc: var(--accent-color);
     border: none;
   } @else {
     color: var(--accent-color);
-    background-color: transparent;
+    // background-color: var(--main-bg-color);
+    $bgc: var(--main-bg-color);
     border: none;
   }
 
   &:focus,
   &:hover {
     @if ($type == normal or $type == small-normal) {
-      // color: var(--inverted-text-color);
-      background-color: #ecebeb;
+      color: var(--inverted-text-color);
+      // background-color: #ecebeb;
+      $bgc-hover: var(--accent-color);
       border: none;
     } @else if ($type == inverted or $type == small-inverted) {
       color: var(--accent-color);
-      background-color: #ecebeb;
+      // background-color: #ecebeb;
+      $bgc-hover: var(--main-bg-color);
       border: none;
     } @else {
-      // color: var(--inverted-text-color);
-      background-color: #ecebeb;
+      color: var(--inverted-text-color);
+      // background-color: #ecebeb;
+      $bgc-hover: var(--accent-color);
       border: none;
     }
+    &::before {
+      width: 110%;
+      border-radius: 50px;
+      transform: translateX(-2%);
+    }
+  }
+
+  &::before {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: ' ';
+    width: 25%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: $bgc-hover;
+    transform: translateX(-109%);
+    transition: all 0.5s cubic-bezier(0.68, -0.15, 0.265, 1.55);
+    z-index: -1;
+  }
+
+  &::after {
+    display: block;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    content: ' ';
+    height: calc(100% - 2px);
+    width: calc(100% - 2px);
+    border-radius: 50px;
+    background-color: $bgc;
+    transform: translateX(-2%);
+    z-index: -2;
   }
 }
