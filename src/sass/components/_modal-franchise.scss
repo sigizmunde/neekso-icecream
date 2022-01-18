@@ -14,12 +14,20 @@
 }
 }
 .form__field--franchise {
-	margin-bottom: 50px;
+	margin-bottom: 20px;
+}
+.form__subtitle {
+	color: var(--secondary-text-color);
+	font-size: 14px;
 }
 .modal-franchise__img {
 display: block;
 margin: 0 auto;
-
+}
+.form__field--textarea {
+	@media screen and ($tablet){
+		width: 100%;
+	}
 }
 .mod-franchise__wrap {
 	@media screen and ($tablet) {
@@ -32,4 +40,15 @@ margin: 0 auto;
 	@media screen and ($tablet) {
 width: 210px;
 	}
+}
+.form-control {
+	width: 100%;
+	background-color: #ffa5ba80;
+	margin-bottom: 20px;
+	font-size: 14px;
+	border: none;
+
+}
+.form__label--select {
+	margin-top: 20px;
 }
