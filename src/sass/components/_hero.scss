@@ -230,7 +230,6 @@
     bottom: 0;
     @media screen and ($tablet) {
       transform: translate(22%, -17%);
-      overflow-y: scroll;
       transition: transform 1000ms;
     }
     @media screen and ($desktop) {
@@ -335,13 +334,12 @@
 }
 
 .milk__image {
-  overflow: hidden;
   @media screen and ($tablet) {
-    width: 124px;
+    // width: 124px;
     height: 126px;
   }
   @media screen and ($desktop) {
-    width: 188px;
+    // width: 188px;
     height: 191px;
   }
 }
