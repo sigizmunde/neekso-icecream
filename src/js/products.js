@@ -4,13 +4,12 @@
     cardRose.classList.toggle('flip');
   });
 
-  cardYellow = document.querySelector('#card-yellow');
+  const cardYellow = document.querySelector('#card-yellow');
   cardYellow.addEventListener('click', () => {
     cardYellow.classList.toggle('flip');
   });
 
-  cardGreen = document.querySelector('#card-green');
+  const cardGreen = document.querySelector('#card-green');
   cardGreen.addEventListener('click', () => {
     cardGreen.classList.toggle('flip');
   });
-
