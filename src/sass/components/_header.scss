@@ -55,6 +55,10 @@
   }
 }
 
+.logo__image {
+  height: 50px;
+}
+
 .btns__wrap {
   display: flex;
   justify-content: center;
@@ -118,17 +122,15 @@
 
 .order-btn {
   @include button(normal, 200px);
-  // margin: 0 auto;
-  // margin-left: 10px;
-  margin-right: 20px;
+  // margin-right: 20px;
 
-  @media screen and (max-width: 767px) {
+  @media screen and ($mobile) {
     display: none;
   }
 
-  // @media screen and (min-width: 768px) and (max-width: 1279px) {
-  //   margin-left: 20px;
-  // }
+  @media screen and ($tablet) {
+    width: 160px;
+  }
 
   &__icon {
     margin-left: 16px;
@@ -145,7 +147,7 @@
   width: 40px;
   height: 40px;
 
-  margin-left: 100px;
+  //margin-left: 100px;
   padding: 0;
   display: flex;
   justify-content: center;
@@ -156,16 +158,22 @@
   cursor: pointer;
 
   @media screen and ($tablet) {
-    padding-right: 30px;
+    margin-right: 20px;
   }
 
   @media screen and ($desktop) {
     display: none;
   }
-
   .menu__icon {
     width: 20px;
     height: 12px;
     fill: var(--accent-color);
+  }
+
+  &:hover,
+  &:focus {
+    & .menu__icon {
+      fill: var(--inverted-text-color);
+    }
   }
 }
