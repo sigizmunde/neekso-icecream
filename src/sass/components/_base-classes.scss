@@ -20,6 +20,8 @@ body {
     width: 1200px;
     padding: 0 74px;
   }
+
+  transition: all var(--transition-params);
 }
 
 .section__heading {
@@ -45,6 +47,8 @@ body {
   &--left {
     text-align: left;
   }
+
+  transition: all var(--transition-params);
 }
 
 .section__subtitle {
@@ -73,4 +77,6 @@ body {
   &--left {
     text-align: left;
   }
+
+  transition: all var(--transition-params);
 }

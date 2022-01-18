@@ -1,0 +1,23 @@
+.modal--map {
+	@media screen and ($mobile) {
+		height: 80%;
+		}
+	@media screen and ($tablet) {
+		max-width: none;
+		width: 600px;
+		height: 480px;
+		}
+	@media screen and ($desktop) {
+		width: 800px;
+		height: 600px;
+		}
+   }
+
+.modal-map__title {
+	font-size: 24px;
+	line-height: 66px;
+}
+.modal-map__location {
+	width: 98%;
+	height: 85%;
+}
