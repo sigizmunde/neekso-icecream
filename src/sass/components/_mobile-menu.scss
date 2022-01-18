@@ -34,9 +34,7 @@
   height: 40px;
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex_center;
 
   background-color: transparent;
   border: none;
@@ -48,6 +46,8 @@
   width: 14px;
   height: 14px;
   fill: var(--inverted-text-color);
+
+  transition: fill var(--transition-params);
 
   .menu__btn-close:hover &,
   .menu__btn-close:focus & {
