@@ -18,7 +18,13 @@
 
     @media screen and ($tablet) {
       height: 94px;
-      // justify-content: center;
+      padding-left: 34px;
+      padding-right: 34px;
+    }
+    @media screen and ($desktop) {
+      height: 94px;
+      padding-left: 46px;
+      padding-right: 46px;
     }
   }
 
@@ -123,9 +129,9 @@
     display: none;
   }
 
-  @media screen and (min-width: 768px) and (max-width: 1279px) {
-    margin-left: 20px;
-  }
+  // @media screen and (min-width: 768px) and (max-width: 1279px) {
+  //   margin-left: 20px;
+  // }
 
   &__icon {
     margin-left: 16px;
