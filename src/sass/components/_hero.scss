@@ -396,17 +396,34 @@
     animation-duration: $animationSpeed + $animationLayer * 7;
   }
   & .picture-wrap__layer:nth-child(8) {
-    top: 95px;
-    left: 600px;
-    opacity: 0;
-    animation: appearanceCream 1800ms 800ms ease-in-out forwards,
+    display: none;
+    @media screen and ($tablet) {
+      opacity: 0;
+      display: block;
+      top: 48px;
+      left: 342px;
+    }
+    @media screen and ($desktop) {
+      top: 95px;
+      left: 600px;
+    }
+
+    animation: appearanceCream 1700ms 800ms ease-in-out forwards,
       flowCream 2200ms 800ms ease-in-out forwards;
   }
   & .picture-wrap__layer:nth-child(9) {
-    top: 95px;
-    left: 600px;
-    opacity: 0;
-    animation: appearanceCream 2000ms 1000ms ease-in-out forwards,
+    display: none;
+    @media screen and ($tablet) {
+      opacity: 0;
+      display: block;
+      top: 48px;
+      left: 342px;
+    }
+    @media screen and ($desktop) {
+      top: 95px;
+      left: 600px;
+    }
+    animation: appearanceCream 1900ms 1000ms ease-in-out forwards,
       flowCream 2200ms 1200ms ease-in-out forwards;
   }
 }
