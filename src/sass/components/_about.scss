@@ -133,9 +133,11 @@
 .icon-angle {
   fill: currentColor;
 }
-#about-more {
-  transform: translateY(0);
-}
+
 .about__more {
-  transform: translateY(100%);
+  transition: all var(--transition-params);
+}
+
+.about__more.is-hidden {
+  font-size: 0;
 }

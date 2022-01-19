@@ -5,14 +5,18 @@ let btnInnerHtmlCashe = btn.innerHTML;
 
 function readMore() {
 
-            if (dots.style.display === "none") {
-                dots.style.display = "inline";
-                btn.innerHTML = btnInnerHtmlCashe;
-                more.style.display="none";
+            if (more.classList.contains("is-hidden")) {
+                // dots.style.display = "inline";
+                more.classList.remove("is-hidden");
+                more.style.transform = "translateY(0)";
+                btn.innerHTML = "Close";
+                dots.style.display="none";
             } else {
-                dots.style.display = "none";
-                btn.innerHTML="Close"
-                more.style.display="inline";
+                // dots.style.display = "none";
+                more.style.transform = "translateY(-90px)";
+                more.classList.add("is-hidden");
+                btn.innerHTML = btnInnerHtmlCashe;
+                dots.style.display="inline";
             }
 }
 
