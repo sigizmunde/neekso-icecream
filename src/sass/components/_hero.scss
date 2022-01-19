@@ -347,8 +347,9 @@
 
 .hero__picture-wrap {
   position: relative;
-  width: 171px;
-  height: 410px;
+  width: 100%;
+  // width: 171px;
+  height: 502px;
   padding-top: 92px;
   z-index: -1;
   border: 1px dashed deeppink;
@@ -356,7 +357,7 @@
   & .picture-wrap__layer {
     position: absolute;
     left: -300px;
-    width: 100%;
+    // width: 100%;
     animation-name: fadeinIcecream;
     animation-fill-mode: forwards;
     animation-timing-function: ease-in-out;
@@ -366,34 +367,41 @@
   $animationLayer: 10ms;
 
   & .picture-wrap__layer:nth-child(1) {
-    bottom: 0px;
+    // bottom: 0px;
     animation-duration: $animationSpeed;
   }
   & .picture-wrap__layer:nth-child(2) {
-    bottom: 100px;
+    // bottom: 88px;
     animation-duration: $animationSpeed + $animationLayer * 2;
   }
-  & img:nth-child(3) {
+  & .picture-wrap__layer:nth-child(3) {
+    // bottom: 130px;
     animation-duration: $animationSpeed + $animationLayer * 3;
   }
-  & img:nth-child(4) {
+  & .picture-wrap__layer:nth-child(4) {
+    // bottom: 168px;
     animation-duration: $animationSpeed + $animationLayer * 4;
   }
-  & img:nth-child(5) {
+  & .picture-wrap__layer:nth-child(5) {
+    // bottom: 203px;
     animation-duration: $animationSpeed + $animationLayer * 5;
   }
-  & img:nth-child(6) {
+  & .picture-wrap__layer:nth-child(6) {
+    // bottom: 262px;
     animation-duration: $animationSpeed + $animationLayer * 6;
   }
-  & img:nth-child(7) {
+  & .picture-wrap__layer:nth-child(7) {
+    // bottom: 309px;
     animation-duration: $animationSpeed + $animationLayer * 7;
   }
-  & img:nth-child(8) {
+  & .picture-wrap__layer:nth-child(8) {
+    // top: 147px;
     opacity: 0;
     animation: flowCream $animationSpeed 700ms ease-in-out forwards,
       fadeinIcecream $animationSpeed forwards;
   }
-  & img:nth-child(9) {
+  & .picture-wrap__layer:nth-child(9) {
+    // top: 139px;
     opacity: 0;
     animation: flowCream $animationSpeed 1200ms ease-in-out forwards,
       fadeinIcecream $animationSpeed forwards;
