@@ -396,14 +396,18 @@
     animation-duration: $animationSpeed + $animationLayer * 7;
   }
   & .picture-wrap__layer:nth-child(8) {
+    top: 95px;
+    left: 600px;
     opacity: 0;
-    animation: flowCream $animationSpeed 700ms ease-in-out forwards,
-      fadeinIcecream $animationSpeed forwards;
+    animation: appearanceCream 1800ms 800ms ease-in-out forwards,
+      flowCream 2200ms 800ms ease-in-out forwards;
   }
   & .picture-wrap__layer:nth-child(9) {
+    top: 95px;
+    left: 600px;
     opacity: 0;
-    animation: flowCream $animationSpeed 1200ms ease-in-out forwards,
-      fadeinIcecream $animationSpeed forwards;
+    animation: appearanceCream 2000ms 1000ms ease-in-out forwards,
+      flowCream 2200ms 1200ms ease-in-out forwards;
   }
 }
 
@@ -440,13 +444,20 @@
   }
 }
 
-@keyframes flowCream {
+@keyframes appearanceCream {
   0% {
     opacity: 0;
-    // transform: translateY(-100px);
   }
   100% {
     opacity: 1;
-    // transform: translateY(0);
+  }
+}
+
+@keyframes flowCream {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(15px);
   }
 }
