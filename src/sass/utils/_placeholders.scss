@@ -6,6 +6,7 @@
 %link_no_accent {
   text-decoration: none;
   color: inherit;
+  transition: all var(--transition-params);
 }
 
 %link {
