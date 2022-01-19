@@ -348,16 +348,24 @@
 .hero__picture-wrap {
   position: relative;
   width: 100%;
-  // width: 171px;
   height: 502px;
   padding-top: 92px;
   z-index: -1;
-  border: 1px dashed deeppink;
+  // border: 1px dashed deeppink;
+
+  @media screen and ($tablet) {
+    height: 399px;
+    padding-top: 63px;
+  }
+
+  @media screen and ($desktop) {
+    height: 665px;
+    padding-top: 108px;
+  }
 
   & .picture-wrap__layer {
     position: absolute;
     left: -300px;
-    // width: 100%;
     animation-name: fadeinIcecream;
     animation-fill-mode: forwards;
     animation-timing-function: ease-in-out;
@@ -367,63 +375,78 @@
   $animationLayer: 10ms;
 
   & .picture-wrap__layer:nth-child(1) {
-    // bottom: 0px;
     animation-duration: $animationSpeed;
   }
   & .picture-wrap__layer:nth-child(2) {
-    // bottom: 88px;
     animation-duration: $animationSpeed + $animationLayer * 2;
   }
   & .picture-wrap__layer:nth-child(3) {
-    // bottom: 130px;
     animation-duration: $animationSpeed + $animationLayer * 3;
   }
   & .picture-wrap__layer:nth-child(4) {
-    // bottom: 168px;
     animation-duration: $animationSpeed + $animationLayer * 4;
   }
   & .picture-wrap__layer:nth-child(5) {
-    // bottom: 203px;
     animation-duration: $animationSpeed + $animationLayer * 5;
   }
   & .picture-wrap__layer:nth-child(6) {
-    // bottom: 262px;
     animation-duration: $animationSpeed + $animationLayer * 6;
   }
   & .picture-wrap__layer:nth-child(7) {
-    // bottom: 309px;
     animation-duration: $animationSpeed + $animationLayer * 7;
   }
   & .picture-wrap__layer:nth-child(8) {
-    // top: 147px;
     opacity: 0;
     animation: flowCream $animationSpeed 700ms ease-in-out forwards,
       fadeinIcecream $animationSpeed forwards;
   }
   & .picture-wrap__layer:nth-child(9) {
-    // top: 139px;
     opacity: 0;
     animation: flowCream $animationSpeed 1200ms ease-in-out forwards,
       fadeinIcecream $animationSpeed forwards;
   }
 }
 
-@keyframes fadeinIcecream {
-  0% {
-    transform: translateX(0);
+@media screen and ($mobile) {
+  @keyframes fadeinIcecream {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(420px);
+    }
   }
-  100% {
-    transform: translateX(420px);
+}
+
+@media screen and ($tablet) {
+  @keyframes fadeinIcecream {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(640px);
+    }
+  }
+}
+
+@media screen and ($desktop) {
+  @keyframes fadeinIcecream {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(900px);
+    }
   }
 }
 
 @keyframes flowCream {
   0% {
     opacity: 0;
-    transform: translateY(-100px);
+    // transform: translateY(-100px);
   }
   100% {
     opacity: 1;
-    transform: translateY(0);
+    // transform: translateY(0);
   }
 }
