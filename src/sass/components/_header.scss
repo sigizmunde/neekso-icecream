@@ -95,11 +95,12 @@
 
 .nav__link {
   @extend %link;
+  padding-top: 25px;
+  padding-bottom: 25px;
   &:hover,
   &:focus,
   &.current {
     color: var(--accent-color);
-    //  @include button(inverted);
   }
 }
 
