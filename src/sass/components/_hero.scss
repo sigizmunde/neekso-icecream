@@ -122,29 +122,29 @@
     }
   }
 
-  &__picture-wrap {
-    width: 100%;
-    padding-top: 92px;
-    z-index: -1;
-  }
+  // &__picture-wrap {
+  //   width: 100%;
+  //   padding-top: 92px;
+  //   z-index: -1;
+  // }
 
-  &__image {
-    position: relative;
-    left: 50%;
-    transform: translateX(-30%);
-    width: 171px;
-    height: 410px;
-    @media screen and ($tablet) {
-      width: 143px;
-      height: 336px;
-      transform: translateX(-10%);
-    }
-    @media screen and ($desktop) {
-      width: 236px;
-      height: 557px;
-      transform: translateX(-20%);
-    }
-  }
+  // &__image {
+  //   position: relative;
+  //   left: 50%;
+  //   transform: translateX(-30%);
+  //   width: 171px;
+  //   height: 410px;
+  //   @media screen and ($tablet) {
+  //     width: 143px;
+  //     height: 336px;
+  //     transform: translateX(-10%);
+  //   }
+  //   @media screen and ($desktop) {
+  //     width: 236px;
+  //     height: 557px;
+  //     transform: translateX(-20%);
+  //   }
+  // }
 
   &__circle {
     position: absolute;
@@ -343,5 +343,134 @@
   }
   @media screen and ($desktop) {
     height: 191px;
+  }
+}
+
+.hero__picture-wrap {
+  position: relative;
+  width: 100%;
+  height: 502px;
+  padding-top: 92px;
+  z-index: -1;
+
+  @media screen and ($tablet) {
+    height: 399px;
+    padding-top: 63px;
+  }
+
+  @media screen and ($desktop) {
+    height: 665px;
+    padding-top: 108px;
+  }
+
+  $animationSpeed: 1000ms;
+  $animationLayer: 20ms;
+  $animationBesier: cubic-bezier(0.65, -0.19, 0.26, 1.29);
+
+  & .picture-wrap__layer {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    animation-name: fadeinIcecream;
+    animation-fill-mode: forwards;
+    animation-duration: $animationSpeed;
+    animation-timing-function: $animationBesier;
+  }
+
+  & .picture-wrap__layer:nth-child(1) {
+    animation-delay: $animationLayer;
+  }
+  & .picture-wrap__layer:nth-child(2) {
+    animation-delay: $animationLayer * 2;
+  }
+  & .picture-wrap__layer:nth-child(3) {
+    animation-delay: $animationLayer * 3;
+  }
+  & .picture-wrap__layer:nth-child(4) {
+    animation-delay: $animationLayer * 4;
+  }
+  & .picture-wrap__layer:nth-child(5) {
+    animation-delay: $animationLayer * 5;
+  }
+  & .picture-wrap__layer:nth-child(6) {
+    animation-delay: $animationLayer * 6;
+  }
+  & .picture-wrap__layer:nth-child(7) {
+    animation-delay: $animationLayer * 7;
+  }
+  & .picture-wrap__layer:nth-child(8) {
+    display: none;
+    @media screen and ($desktop) {
+      display: block;
+      opacity: 0;
+      top: 95px;
+      left: 50%;
+      transform: translateX(-20%);
+    }
+    animation: appearanceCream 1700ms 800ms ease-in-out forwards,
+      flowCream 2200ms 800ms ease-in-out forwards;
+  }
+  & .picture-wrap__layer:nth-child(9) {
+    display: none;
+    opacity: 0;
+    @media screen and ($desktop) {
+      display: block;
+      top: 95px;
+      left: 50%;
+      transform: translateX(-20%);
+    }
+    animation: appearanceCream 1900ms 1000ms ease-in-out forwards,
+      flowCream 2200ms 1200ms ease-in-out forwards;
+  }
+}
+
+@media screen and ($mobile) {
+  @keyframes fadeinIcecream {
+    0% {
+      transform: translateX(-100vw);
+    }
+    100% {
+      transform: translateX(-30%);
+    }
+  }
+}
+
+@media screen and ($tablet) {
+  @keyframes fadeinIcecream {
+    0% {
+      transform: translateX(-100vw);
+    }
+    100% {
+      transform: translateX(-10%);
+    }
+  }
+}
+
+@media screen and ($desktop) {
+  @keyframes fadeinIcecream {
+    0% {
+      transform: translateX(-100vw);
+    }
+    100% {
+      transform: translateX(-20%);
+    }
+  }
+}
+
+@keyframes appearanceCream {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes flowCream {
+  0% {
+    transform: translate(-20%, 0);
+  }
+  100% {
+    transform: translate(-20%, 15px);
   }
 }
