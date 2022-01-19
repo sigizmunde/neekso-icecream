@@ -13,7 +13,7 @@
     </div>
     <div class="hero__circle"></div>
     <div class="hero__picture-wrap">
-      <picture>
+      <!-- <picture>
         <source
           srcset="./images/hero/hero-desktop@1x.png 1x, ./images/hero/hero-desktop@2x.png 2x"
           media="(min-width: 1280px)"
@@ -27,6 +27,39 @@
           media="(max-width: 767px)"
         />
         <img class="hero__image" src="./images/hero/hero-desktop@1x.png" alt="Photo icecream" />
+      </picture> -->
+      <picture class="picture-wrap__layer">
+        <source
+          srcset="./images/hero/01_cup-desktop@1x.png 1x, ./images/hero/01_cup-desktop@2x.png 2x"
+          media="(min-width: 1280px)"
+        />
+        <source
+          srcset="./images/hero/01_cup-tablet@1x.png 1x, ./images/hero/01_cup-tablet@2x.png 2x"
+          media="(min-width: 768px)"
+        />
+        <source
+          srcset="./images/hero/01_cup-mobile@1x.png 1x, ./images/hero/01_cup-mobile@2x.png 2x"
+          media="(max-width: 767px)"
+        />
+        <img src="./images/hero/01_cup-desktop@1x.png" alt="cup" />
+      </picture>
+      <picture class="picture-wrap__layer">
+        <source
+          srcset="
+            ./images/hero/02_scoop-desktop@1x.png 1x,
+            ./images/hero/02_scoop-desktop@2x.png 2x
+          "
+          media="(min-width: 1280px)"
+        />
+        <source
+          srcset="./images/hero/02_scoop-tablet@1x.png 1x, ./images/hero/02_scoop-tablet@2x.png 2x"
+          media="(min-width: 768px)"
+        />
+        <source
+          srcset="./images/hero/02_scoop-mobile@1x.png 1x, ./images/hero/02_scoop-mobile@2x.png 2x"
+          media="(max-width: 767px)"
+        />
+        <img src="./images/hero/02_scoop-desktop@1x.png" alt="scoop" />
       </picture>
     </div>
 

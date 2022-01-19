@@ -122,11 +122,11 @@
     }
   }
 
-  &__picture-wrap {
-    width: 100%;
-    padding-top: 92px;
-    z-index: -1;
-  }
+  // &__picture-wrap {
+  //   width: 100%;
+  //   padding-top: 92px;
+  //   z-index: -1;
+  // }
 
   &__image {
     position: relative;
@@ -342,5 +342,80 @@
   @media screen and ($desktop) {
     // width: 188px;
     height: 191px;
+  }
+}
+
+.hero__picture-wrap {
+  position: relative;
+  width: 171px;
+  height: 410px;
+  padding-top: 92px;
+  z-index: -1;
+  border: 1px dashed deeppink;
+
+  & .picture-wrap__layer {
+    position: absolute;
+    left: -300px;
+    width: 100%;
+    animation-name: fadeinIcecream;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+  }
+
+  $animationSpeed: 1000ms;
+  $animationLayer: 10ms;
+
+  & .picture-wrap__layer:nth-child(1) {
+    bottom: 0px;
+    animation-duration: $animationSpeed;
+  }
+  & .picture-wrap__layer:nth-child(2) {
+    bottom: 100px;
+    animation-duration: $animationSpeed + $animationLayer * 2;
+  }
+  & img:nth-child(3) {
+    animation-duration: $animationSpeed + $animationLayer * 3;
+  }
+  & img:nth-child(4) {
+    animation-duration: $animationSpeed + $animationLayer * 4;
+  }
+  & img:nth-child(5) {
+    animation-duration: $animationSpeed + $animationLayer * 5;
+  }
+  & img:nth-child(6) {
+    animation-duration: $animationSpeed + $animationLayer * 6;
+  }
+  & img:nth-child(7) {
+    animation-duration: $animationSpeed + $animationLayer * 7;
+  }
+  & img:nth-child(8) {
+    opacity: 0;
+    animation: flowCream $animationSpeed 700ms ease-in-out forwards,
+      fadeinIcecream $animationSpeed forwards;
+  }
+  & img:nth-child(9) {
+    opacity: 0;
+    animation: flowCream $animationSpeed 1200ms ease-in-out forwards,
+      fadeinIcecream $animationSpeed forwards;
+  }
+}
+
+@keyframes fadeinIcecream {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(420px);
+  }
+}
+
+@keyframes flowCream {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
