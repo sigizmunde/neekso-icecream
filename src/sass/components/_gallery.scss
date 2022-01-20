@@ -55,7 +55,7 @@
 
 .grid {
   @media screen and ($mobile) {
-    columns: 2 160px;
+    columns: 2 120px;
     // display: none;
 
     & div:not(:nth-child(3n + 1)) {
