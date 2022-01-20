@@ -47,6 +47,7 @@
 // }
 
 .gallery__mobile {
+  display: none;
   @media screen and ($tablet) {
     display: none;
   }
@@ -54,7 +55,12 @@
 
 .grid {
   @media screen and ($mobile) {
-    display: none;
+    columns: 2 160px;
+    // display: none;
+
+    & div:not(:nth-child(3n + 1)) {
+      display: none;
+    }
   }
 
   columns: 4 160px;
